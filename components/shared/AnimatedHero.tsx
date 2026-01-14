@@ -69,7 +69,7 @@ export default function AnimatedHero({
       </div>
 
       {/* Content */}
-      <div className="relative z-30 container mx-auto px-6 py-20">
+      <div className="relative z-30 container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

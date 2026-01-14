@@ -4,10 +4,28 @@ import AnimatedHero from "@/components/shared/AnimatedHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
 export const metadata: Metadata = {
-  title:
-    "Our Services | Ceylon Cabs - Transportation Solutions Across Sri Lanka",
+  title: "Our Services - Transportation Solutions Across Sri Lanka",
   description:
     "Explore our comprehensive range of services including airport transfers, one-day tours, multi-day round tours, city tours, and more. Available 24/7 across Sri Lanka.",
+  keywords: [
+    "Sri Lanka transportation services",
+    "airport transfer service",
+    "one day tours Sri Lanka",
+    "multi-day tours",
+    "city tours Colombo",
+    "wedding transport Sri Lanka",
+    "corporate transport",
+    "24/7 cab service",
+  ],
+  openGraph: {
+    title: "Our Services | Ceylon Cabs",
+    description:
+      "Professional transportation services across Sri Lanka. Airport transfers, tours, and custom packages.",
+    type: "website",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || ""}/services`,
+  },
 };
 
 export default function ServicesPage() {
@@ -144,6 +162,7 @@ export default function ServicesPage() {
     },
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const popularDestinations = [
     "Colombo",
     "Kandy",
@@ -155,6 +174,7 @@ export default function ServicesPage() {
     "Arugam Bay",
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const specialPackages = [
     "Customized tour itineraries based on your interests",
     "Multi-day packages with accommodation assistance",
@@ -286,7 +306,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-xl text-emerald-50 mb-8">
               Get in touch with us today for a personalized quote and reliable
-              transportation services. We're available 24/7 for your
+              transportation services. We&apos;re available 24/7 for your
               convenience.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-6">

@@ -7,14 +7,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
               Ceylon<span className="text-emerald-400">Cabs</span>
             </h3>
-            <p className="text-sm mb-4 text-gray-400">
+            <p className="text-xs sm:text-sm mb-3 sm:mb-4 text-gray-400">
               Sri Lanka's most trusted cab and taxi service. Specializing in
               reliable airport transfers, safe city tours, and seamless
               island-wide travel.
@@ -24,10 +24,10 @@ export default function Footer() {
                 href={`https://wa.me/${WHATSAPP_NUMBERS.colombo}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition font-medium"
+                className="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-400 hover:text-emerald-300 transition font-medium text-xs sm:text-sm"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -40,8 +40,10 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              Quick Links
+            </h4>
+            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/about"

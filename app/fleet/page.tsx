@@ -4,9 +4,28 @@ import AnimatedHero from "@/components/shared/AnimatedHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Our Fleet - Modern Vehicles for Sri Lanka Travel | Ceylon Cabs",
+  title: "Our Fleet - Premium Vehicles for Every Journey",
   description:
     "Explore our diverse fleet of well-maintained vehicles. From spacious vans to comfortable sedans and compact cars - perfect for your Sri Lankan adventure.",
+  keywords: [
+    "Sri Lanka rental vehicles",
+    "luxury cars Sri Lanka",
+    "SUV rental Sri Lanka",
+    "sedan hire Colombo",
+    "mini van rental",
+    "premium vehicles Sri Lanka",
+    "wedding cars Sri Lanka",
+    "Toyota KDH rental",
+  ],
+  openGraph: {
+    title: "Our Fleet | Ceylon Cabs",
+    description:
+      "Premium vehicles for every journey. Sedans, SUVs, vans, and luxury cars available.",
+    type: "website",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || ""}/fleet`,
+  },
 };
 
 const fleetData = {
@@ -165,13 +184,19 @@ export default function FleetPage() {
       >
         <div className="flex flex-wrap gap-4 justify-center mt-6">
           <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">11 Vehicle Models</p>
+            <p className="text-white text-sm font-semibold">
+              11 Vehicle Models
+            </p>
           </div>
           <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">All Well-Maintained</p>
+            <p className="text-white text-sm font-semibold">
+              All Well-Maintained
+            </p>
           </div>
           <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">Professional Drivers</p>
+            <p className="text-white text-sm font-semibold">
+              Professional Drivers
+            </p>
           </div>
         </div>
       </AnimatedHero>
@@ -211,7 +236,7 @@ export default function FleetPage() {
                       <span className="text-6xl">🚐</span>
                     )}
                   </div>
-                  
+
                   {/* flex-grow pushes content to fill space, justify-between aligns bottom items */}
                   <div className="p-5 flex flex-col flex-grow">
                     <div className="mb-3">
@@ -299,7 +324,7 @@ export default function FleetPage() {
                       <span className="text-6xl">🚗</span>
                     )}
                   </div>
-                  
+
                   <div className="p-5 flex flex-col flex-grow">
                     <div className="mb-3">
                       <div className="flex justify-between items-start mb-1">
@@ -322,7 +347,7 @@ export default function FleetPage() {
                     <div className="border-t border-gray-100 pt-3 mt-auto">
                       <div className="flex flex-wrap gap-2">
                         {vehicle.features.map((feature, idx) => (
-                          <span 
+                          <span
                             key={idx}
                             className="inline-flex items-center px-2 py-1 rounded-md bg-gray-50 text-xs text-gray-600 border border-gray-100"
                           >
@@ -372,7 +397,7 @@ export default function FleetPage() {
                       <span className="text-5xl">🚙</span>
                     )}
                   </div>
-                  
+
                   <div className="p-4 flex flex-col flex-grow">
                     <div className="mb-2">
                       <div className="flex justify-between items-start mb-1">
@@ -393,15 +418,15 @@ export default function FleetPage() {
                     </p>
 
                     <div className="grid grid-cols-2 gap-1 mt-auto">
-                       {vehicle.features.slice(0, 2).map((feature, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center gap-1 text-[10px] text-gray-500"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-purple-400"></span>
-                            <span className="truncate">{feature}</span>
-                          </div>
-                        ))}
+                      {vehicle.features.slice(0, 2).map((feature, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-1 text-[10px] text-gray-500"
+                        >
+                          <span className="w-1 h-1 rounded-full bg-purple-400"></span>
+                          <span className="truncate">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

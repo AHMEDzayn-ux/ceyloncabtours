@@ -39,14 +39,14 @@ export default async function HomePage() {
       <PopularDestinations />
 
       {/* Fleet Preview Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Fleet
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
                 Choose from our diverse range of well-maintained vehicles for
                 your perfect journey
               </p>

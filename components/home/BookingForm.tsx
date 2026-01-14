@@ -35,15 +35,15 @@ export default function BookingForm() {
   };
 
   return (
-    <section id="booking" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="booking" className="py-16 sm:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
               Get in Touch
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Share your details and we&apos;ll connect with you via WhatsApp to
               discuss your travel plans
             </p>
@@ -51,14 +51,14 @@ export default function BookingForm() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl shadow-xl p-10 md:p-16"
+            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-10 md:p-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-sm sm:text-base font-semibold text-gray-700 mb-2 sm:mb-3"
                 >
                   Name *
                 </label>
@@ -69,7 +69,7 @@ export default function BookingForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-base"
                   placeholder="John Smith"
                 />
               </div>
@@ -78,7 +78,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-sm sm:text-base font-semibold text-gray-700 mb-2 sm:mb-3"
                 >
                   Phone Number *
                 </label>
@@ -89,7 +89,7 @@ export default function BookingForm() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-base"
                   placeholder="+94 77 123 4567"
                 />
               </div>

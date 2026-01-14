@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { tours } from '@/lib/data/tours';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ceyloncabs.lk';
@@ -56,13 +55,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic tour pages
-  const tourPages: MetadataRoute.Sitemap = tours.map((tour) => ({
-    url: `${baseUrl}/tours/${tour.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: tour.featured ? 0.9 : 0.7,
-  }));
-
-  return [...staticPages, ...tourPages];
+  return staticPages;
 }

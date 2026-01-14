@@ -5,9 +5,27 @@ import AnimatedHero from "@/components/shared/AnimatedHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Ceylon Cabs",
+  title: "FAQ - Your Questions Answered",
   description:
     "Find answers to common questions about our cab services, bookings, tours, and more. Learn about our transparent pricing, professional drivers, and 24/7 availability.",
+  keywords: [
+    "Sri Lanka cab FAQ",
+    "Ceylon Cabs questions",
+    "booking information",
+    "pricing questions",
+    "travel FAQ Sri Lanka",
+    "cab service help",
+    "taxi booking help",
+  ],
+  openGraph: {
+    title: "FAQ | Ceylon Cabs",
+    description:
+      "Common questions about our services, pricing, and booking process.",
+    type: "website",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || ""}/faq`,
+  },
 };
 
 export default function FAQPage() {

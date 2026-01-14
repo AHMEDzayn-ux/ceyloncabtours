@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-// Assuming this path exists
-import { WHATSAPP_NUMBERS } from "@/lib/utils/whatsapp";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,83 +55,94 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-
-
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 text-white hover:text-emerald-400 transition-colors"
+            className="lg:hidden p-2 text-white hover:text-emerald-400 transition-colors relative z-50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
+            <div className="w-6 h-5 flex flex-col justify-between">
+              <motion.span
+                animate={
+                  isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
+                }
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-full h-0.5 bg-current origin-center"
+              />
+              <motion.span
+                animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                className="w-full h-0.5 bg-current"
+              />
+              <motion.span
+                animate={
+                  isMobileMenuOpen
+                    ? { rotate: -45, y: -8 }
+                    : { rotate: 0, y: 0 }
+                }
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-full h-0.5 bg-current origin-center"
+              />
+            </div>
           </button>
         </nav>
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div
-        className={`lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-t border-white/10 shadow-2xl transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="container mx-auto px-6 py-6 flex flex-col gap-6">
-          {[
-            "Home",
-            "Services",
-            "Fleet",
-            "Tours",
-            "Gallery",
-            "FAQ",
-            "Contact",
-          ].map((item) => (
-            <Link
-              key={item}
-              href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="text-lg font-medium text-gray-300 hover:text-emerald-400 hover:pl-4 transition-all border-b border-white/5 pb-3"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item}
-            </Link>
-          ))}
-          <Link
-            href="/#booking"
-            className="mt-2 bg-emerald-500 text-white text-center py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors"
-            onClick={() => setIsMobileMenuOpen(false)}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-t border-white/10 shadow-2xl overflow-hidden"
           >
-            Book Now
-          </Link>
-        </div>
-      </div>
+            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+              {[
+                "Home",
+                "Services",
+                "Fleet",
+                "Tours",
+                "Gallery",
+                "FAQ",
+                "Contact",
+              ].map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                >
+                  <Link
+                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors border-b border-white/5 pb-3 block"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.3 }}
+              >
+                <Link
+                  href="/#booking"
+                  className="mt-2 bg-emerald-500 text-white text-center py-3 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors block"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Book Now
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

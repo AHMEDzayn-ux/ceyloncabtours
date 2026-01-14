@@ -42,9 +42,9 @@ export default function PopularDestinations() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
+    <section ref={sectionRef} className="py-12 sm:py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Popular Destinations
           </h2>
@@ -56,7 +56,7 @@ export default function PopularDestinations() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {featuredTours.map((tour, index) => (
             <div
-              key={tour.slug}
+              key={tour.title}
               className={`transition-all duration-700 transform ${
                 visibleCards[index]
                   ? "opacity-100 translate-y-0"

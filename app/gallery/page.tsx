@@ -4,9 +4,29 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import ImageWithFallback from "@/components/shared/ImageWithFallback";
 
 export const metadata: Metadata = {
-  title: "Photo Gallery - Ceylon Cabs | Sri Lanka Travel Memories",
+  title: "Photo Gallery - Explore Sri Lanka's Beauty",
   description:
     "View stunning photos from our tours across Sri Lanka. See beautiful destinations, happy customers, and memorable moments from Ceylon Cabs tours.",
+  keywords: [
+    "Sri Lanka photos",
+    "Sri Lanka tourism",
+    "cultural heritage Sri Lanka",
+    "Sri Lanka beaches",
+    "wildlife Sri Lanka",
+    "natural beauty Sri Lanka",
+    "travel photography Sri Lanka",
+    "Sigiriya photos",
+    "Kandy temple photos",
+  ],
+  openGraph: {
+    title: "Photo Gallery | Ceylon Cabs",
+    description:
+      "Discover Sri Lanka's stunning beauty through our curated photo gallery.",
+    type: "website",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || ""}/gallery`,
+  },
 };
 
 // Static gallery data - organized by category
