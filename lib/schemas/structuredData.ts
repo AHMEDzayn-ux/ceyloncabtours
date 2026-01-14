@@ -70,16 +70,7 @@ export function generateTourSchema(tour: Tour) {
     '@type': 'TouristTrip',
     name: tour.title,
     description: tour.shortDescription,
-    duration: tour.duration,
     touristType: 'Leisure',
-    itinerary: {
-      '@type': 'ItemList',
-      itemListElement: tour.highlights.map((highlight, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: highlight,
-      })),
-    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Ceylon Cabs',

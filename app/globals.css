@@ -67,6 +67,22 @@ html {
   animation: beat 2s infinite ease-in-out;
 }
 
+/* Scroll indicator animation */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+
+.animate-scroll {
+  animation: scroll 1.5s ease-in-out infinite;
+}
+
 /* Fade-in-up animation for scroll reveals */
 @keyframes fadeInUp {
   from {

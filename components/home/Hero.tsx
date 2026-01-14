@@ -29,11 +29,15 @@ export default function Hero() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
+    // Use setTimeout to avoid synchronous setState in effect
+    const timer = setTimeout(() => setLoaded(true), 0);
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
     }, 5000);
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -277,34 +281,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(8px);
-            opacity: 0;
-          }
-        }
-        .animate-scroll {
-          animation: scroll 1.5s ease-in-out infinite;
-        }
-        @keyframes beat {
-          0%,
-          100% {
-            transform: scale(1);
-          }
-          50% {
-            transform: scale(1.05);
-          }
-        }
-        .animate-beat {
-          animation: beat 2s infinite ease-in-out;
-        }
-      `}</style>
     </section>
   );
 }
