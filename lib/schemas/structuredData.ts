@@ -9,7 +9,7 @@ export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Ceylon Cabs',
+    name: 'CeylonCabTours',
     image: `${process.env.NEXT_PUBLIC_SITE_URL}/images/hero/hero-1.jpg`,
     '@id': process.env.NEXT_PUBLIC_SITE_URL,
     url: process.env.NEXT_PUBLIC_SITE_URL,
@@ -73,7 +73,7 @@ export function generateTourSchema(tour: Tour) {
     touristType: 'Leisure',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Ceylon Cabs',
+      name: 'CeylonCabTours',
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     image: `${process.env.NEXT_PUBLIC_SITE_URL}${tour.heroImage}`,
@@ -94,7 +94,7 @@ export function generateReviewSchema(reviews: { name: string; content: string; r
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Ceylon Cabs',
+    name: 'CeylonCabTours',
     aggregateRating,
     review: reviews.map((review) => ({
       '@type': 'Review',

@@ -18,6 +18,7 @@ export default function PopularDestinations() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Animate in when scrolling into view
             featuredTours.forEach((_, index) => {
               setTimeout(() => {
                 setVisibleCards((prev) => {
@@ -27,10 +28,13 @@ export default function PopularDestinations() {
                 });
               }, index * 100);
             });
+          } else {
+            // Reset animation state when scrolling out of view
+            setVisibleCards([]);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15, rootMargin: "-50px" }
     );
 
     if (sectionRef.current) {
@@ -42,7 +46,7 @@ export default function PopularDestinations() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 bg-white">
+    <section ref={sectionRef} className="py-8 sm:py-12 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -73,7 +77,7 @@ export default function PopularDestinations() {
             href="/tours"
             className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold text-lg group transition-all"
           >
-            View All Tours
+            View All Destinations
             <svg
               className="w-5 h-5 transition-transform group-hover:translate-x-1"
               fill="none"

@@ -1,12 +1,13 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import AnimatedHero from "@/components/shared/AnimatedHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
-import ImageWithFallback from "@/components/shared/ImageWithFallback";
 
 export const metadata: Metadata = {
   title: "Photo Gallery - Explore Sri Lanka's Beauty",
   description:
-    "View stunning photos from our tours across Sri Lanka. See beautiful destinations, happy customers, and memorable moments from Ceylon Cabs tours.",
+    "View stunning photos from our tours across Sri Lanka. See beautiful destinations, happy customers, and memorable moments from CeylonCabTours.",
   keywords: [
     "Sri Lanka photos",
     "Sri Lanka tourism",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     "Kandy temple photos",
   ],
   openGraph: {
-    title: "Photo Gallery | Ceylon Cabs",
+    title: "Photo Gallery | CeylonCabTours",
     description:
       "Discover Sri Lanka's stunning beauty through our curated photo gallery.",
     type: "website",
@@ -163,16 +164,16 @@ export default function GalleryPage() {
         description="Beautiful memories from our tours across Sri Lanka"
         images={[
           {
-            src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80",
-            alt: "Sigiriya Rock Fortress",
+            src: "https://images.unsplash.com/photo-1609681980718-340e7f4b11d7?q=80&w=840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            alt: "Geradigini ella",
           },
           {
-            src: "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=1600&q=80",
-            alt: "Beautiful beaches of Sri Lanka",
+            src: "https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            alt: "nine arch bridges",
           },
           {
-            src: "https://images.unsplash.com/photo-1642095012245-bda8033e8ee3?w=1600&q=80",
-            alt: "Nine Arch Bridge Ella",
+            src: "https://images.unsplash.com/photo-1645839449907-72c4d3cb8fb3?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            alt: "Unawatuna beach",
           },
         ]}
       />
@@ -194,10 +195,13 @@ export default function GalleryPage() {
                   <ScrollReveal key={idx} delay={idx * 0.05}>
                     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
                       <div className="relative h-64 bg-gradient-to-br from-emerald-100 to-teal-100 overflow-hidden">
-                        <img
+                        <Image
                           src={image.url}
                           alt={image.caption}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          fill
+                          loading="lazy"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
@@ -227,12 +231,12 @@ export default function GalleryPage() {
             Book your Sri Lankan adventure today and experience these beautiful
             destinations
           </p>
-          <a
+          <Link
             href="/#booking"
             className="inline-block bg-white text-emerald-600 px-10 py-4 rounded-lg hover:bg-emerald-50 transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105"
           >
             Book Your Tour
-          </a>
+          </Link>
         </div>
       </section>
     </div>

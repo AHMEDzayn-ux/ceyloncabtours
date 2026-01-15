@@ -39,11 +39,11 @@ export default async function ToursPage() {
         description="Custom tour packages designed for your perfect Sri Lankan adventure. All itineraries are flexible and can be tailored to your preferences."
         images={[
           {
-            src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80",
+            src: "https://images.unsplash.com/photo-1612862862126-865765df2ded?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             alt: "Ancient city tours in Sri Lanka",
           },
           {
-            src: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=1600&q=80",
+            src: "https://images.unsplash.com/photo-1546603999-24fbcb911bee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             alt: "Cultural heritage sites",
           },
           {

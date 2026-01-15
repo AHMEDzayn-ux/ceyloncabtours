@@ -13,6 +13,7 @@ export default function ServicesOverview() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Animate in when scrolling into view
             services.forEach((_, index) => {
               setTimeout(() => {
                 setVisibleCards((prev) => {
@@ -22,10 +23,13 @@ export default function ServicesOverview() {
                 });
               }, index * 150);
             });
+          } else {
+            // Reset animation state when scrolling out of view
+            setVisibleCards([]);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15, rootMargin: "-50px" }
     );
 
     if (sectionRef.current) {
@@ -37,7 +41,7 @@ export default function ServicesOverview() {
 
   return (
     // Reduced vertical padding from py-24 to py-12
-    <section ref={sectionRef} className="py-12 sm:py-16 bg-white">
+    <section ref={sectionRef} className="py-8 sm:py-12 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Reduced bottom margin from mb-20 to mb-10 */}
         <div className="text-center mb-8 sm:mb-10">

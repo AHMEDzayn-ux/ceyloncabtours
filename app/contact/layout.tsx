@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us - Get in Touch",
   description:
-    "Contact Ceylon Cabs for inquiries, bookings, or support. Visit our offices in Colombo, Kandy, or Galle. Available 24/7 via phone and WhatsApp.",
+    "Contact CeylonCabTours for inquiries, bookings, or support. Visit our offices in Colombo, Kandy, or Galle. Available 24/7 via phone and WhatsApp.",
   keywords: [
     "contact Ceylon Cabs",
     "cab booking Sri Lanka",
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "Galle office",
   ],
   openGraph: {
-    title: "Contact Us | Ceylon Cabs",
+    title: "Contact Us | CeylonCabTours",
     description:
-      "Get in touch with Ceylon Cabs. 24/7 service across Sri Lanka.",
+      "Get in touch with CeylonCabTours. 24/7 service across Sri Lanka.",
     type: "website",
   },
   alternates: {

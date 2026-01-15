@@ -96,7 +96,7 @@ export default function Hero() {
                 <span className="block text-4xl sm:text-6xl md:text-7xl mb-2">
                   Your Trusted Cab Service
                 </span>
-                <span className="block text-3xl sm:text-5xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+                <span className="block text-4xl sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
                   In Sri Lanka
                 </span>
               </h1>
@@ -135,13 +135,7 @@ export default function Hero() {
               <div className="w-full sm:w-auto relative group">
                 <Link
                   href="/#booking"
-                  className="
-                    relative flex items-center justify-center w-full sm:w-auto
-                    px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px]
-                    bg-emerald-500 hover:bg-emerald-600 text-white 
-                    rounded-full font-bold text-base sm:text-lg
-                    animate-beat transition-colors duration-300 shadow-lg shadow-emerald-900/20
-                  "
+                  className="relative flex items-center justify-center w-full sm:w-auto px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px] bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-bold text-base sm:text-lg animate-beat transition-colors duration-300 shadow-lg shadow-emerald-900/20"
                 >
                   Book Your Ride
                   <svg
@@ -164,15 +158,7 @@ export default function Hero() {
               <div className="w-full sm:w-auto">
                 <Link
                   href="/tours"
-                  className="
-                    flex items-center justify-center w-full sm:w-auto
-                    px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px]
-                    bg-white/10 hover:bg-white/20 backdrop-blur-md 
-                    border border-white/20 hover:border-emerald-400/50 
-                    text-white hover:text-emerald-300 
-                    rounded-full font-semibold text-base sm:text-lg
-                    transition-all duration-300
-                  "
+                  className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px] bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-emerald-400/50 text-white hover:text-emerald-300 rounded-full font-semibold text-base sm:text-lg transition-all duration-300"
                 >
                   Explore Tours
                 </Link>

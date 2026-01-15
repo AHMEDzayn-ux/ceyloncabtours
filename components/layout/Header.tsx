@@ -29,7 +29,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2">
             <span className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:opacity-90 transition-opacity">
-              Ceylon<span className="text-emerald-500">Cabs</span>
+              Ceylon<span className="text-emerald-500">CabTours</span>
             </span>
           </Link>
 
@@ -37,20 +37,20 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-8 text-base font-medium text-gray-300">
               {[
-                "Home",
-                "Services",
-                "Fleet",
-                "Tours",
-                "Gallery",
-                "FAQ",
-                "Contact",
+                { name: "Home", href: "/" },
+                { name: "Services", href: "/services" },
+                { name: "Destinations", href: "/destinations" },
+                { name: "Fleet", href: "/fleet" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "FAQ", href: "/faq" },
+                { name: "Contact", href: "/contact" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    href={item.href}
                     className="py-2 hover:text-emerald-400 transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-emerald-400 after:transition-all hover:after:w-full"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -103,26 +103,26 @@ export default function Header() {
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {[
-                "Home",
-                "Services",
-                "Fleet",
-                "Tours",
-                "Gallery",
-                "FAQ",
-                "Contact",
+                { name: "Home", href: "/" },
+                { name: "Services", href: "/services" },
+                { name: "Destinations", href: "/destinations" },
+                { name: "Fleet", href: "/fleet" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "FAQ", href: "/faq" },
+                { name: "Contact", href: "/contact" },
               ].map((item, index) => (
                 <motion.div
-                  key={item}
+                  key={item.name}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05, duration: 0.3 }}
                 >
                   <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-lg font-medium text-gray-300 hover:text-emerald-400 transition-colors border-b border-white/5 pb-3 block"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </motion.div>
               ))}

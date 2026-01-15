@@ -1,16 +1,84 @@
-import Hero from "@/components/home/Hero";
-import BookingForm from "@/components/home/BookingForm";
-import ServicesOverview from "@/components/home/ServicesOverview";
-import PopularDestinations from "@/components/home/PopularDestinations";
-import CustomerReviews from "@/components/home/CustomerReviews";
+import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { createClient } from "@/lib/supabase/server";
 import { Review } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
+import { generateBreadcrumbSchema } from "@/lib/schemas/structuredData";
+
+// Lazy load components with SSR false for client-only components
+const Hero = dynamic(() => import("@/components/home/Hero"), {
+  ssr: true,
+  loading: () => (
+    <div className="h-screen bg-gradient-to-br from-gray-900 to-gray-800 animate-pulse" />
+  ),
+});
+const ServicesOverview = dynamic(
+  () => import("@/components/home/ServicesOverview"),
+  {
+    loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  }
+);
+const PopularDestinations = dynamic(
+  () => import("@/components/home/PopularDestinations"),
+  {
+    loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  }
+);
+const BookingForm = dynamic(() => import("@/components/home/BookingForm"), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+});
+const CustomerReviews = dynamic(
+  () => import("@/components/home/CustomerReviews"),
+  {
+    loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  }
+);
 
 // ISR - Revalidate every 30 minutes
 export const revalidate = 1800;
+
+// SEO metadata
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Book reliable cab services in Sri Lanka with CeylonCabTours. Airport transfers, city tours, and custom travel packages. Professional drivers, modern fleet, 24/7 service across Colombo, Kandy, Galle, and beyond.",
+  keywords: [
+    "Sri Lanka cab booking",
+    "airport transfer Colombo",
+    "Sri Lanka tours",
+    "taxi service Sri Lanka",
+    "Kandy cab service",
+    "Galle taxi",
+    "Sri Lanka transportation",
+    "tour packages Sri Lanka",
+  ],
+  openGraph: {
+    title: "CeylonCabTours - Your Trusted Travel Partner in Sri Lanka",
+    description:
+      "Experience Sri Lanka with comfort and style. Professional cab services and custom tours across the island.",
+    type: "website",
+    images: [
+      {
+        url: "/images/hero/hero-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CeylonCabTours - Premium Transportation in Sri Lanka",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CeylonCabTours - Premium Cab Service Sri Lanka",
+    description:
+      "Book reliable transportation across Sri Lanka. Airport transfers, tours, and more.",
+    images: ["/images/hero/hero-1.jpg"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default async function HomePage() {
   // Fetch approved reviews from database (gracefully handle errors if Supabase not configured)
@@ -28,22 +96,39 @@ export default async function HomePage() {
     if (!error && data) {
       reviews = data as Review[];
     }
-  } catch (error) {
+  } catch {
     console.log("Supabase not configured yet - reviews will be empty");
   }
 
+  // Generate structured data
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+  ]);
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Hero />
       <ServicesOverview />
       <PopularDestinations />
 
       {/* Fleet Preview Section */}
-      <section className="py-12 sm:py-16 bg-gray-50">
+      <section
+        aria-labelledby="fleet-heading"
+        className="py-8 sm:py-12 bg-white"
+      >
         <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2
+                id="fleet-heading"
+                className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
+              >
                 Our Fleet
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
@@ -57,15 +142,15 @@ export default async function HomePage() {
             {[
               {
                 category: "Vans",
-                icon: "🚐",
+                image: "/images/fleet/van-preview.jpg",
                 description: "Toyota HiAce models for large groups",
                 capacity: "10-14 Passengers",
                 features: ["Spacious Interior", "AC", "Long Distance Tours"],
                 models: "4 Models Available",
               },
               {
-                category: "Sedans & Wagons",
-                icon: "🚗",
+                category: "Sedans",
+                image: "/images/fleet/sedan-preview.jpg",
                 description: "Comfortable cars for families",
                 capacity: "4-5 Passengers",
                 features: ["Fuel Efficient", "Comfortable", "City Tours"],
@@ -73,7 +158,7 @@ export default async function HomePage() {
               },
               {
                 category: "Small Cars",
-                icon: "🚙",
+                image: "/images/fleet/compact-preview.jpg",
                 description: "Compact cars for solo travelers",
                 capacity: "4 Passengers",
                 features: ["Ultra Compact", "Budget Friendly", "City Friendly"],
@@ -81,15 +166,22 @@ export default async function HomePage() {
               },
             ].map((vehicle, index) => (
               <ScrollReveal key={vehicle.category} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
-                  <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-8 text-center">
-                    <div className="text-7xl mb-3 group-hover:scale-110 transition-transform">
-                      {vehicle.icon}
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full inline-block">
-                      <p className="text-white text-sm font-semibold">
-                        {vehicle.capacity}
-                      </p>
+                <article className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={vehicle.image}
+                      alt={vehicle.category}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                      <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <p className="text-gray-900 text-sm font-semibold">
+                          {vehicle.capacity}
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div className="p-6">
@@ -100,7 +192,7 @@ export default async function HomePage() {
                       {vehicle.description}
                     </p>
                     <div className="mb-4">
-                      <p className="text-xs font-semibold text-emerald-600 mb-2">
+                      <p className="text-base font-bold text-emerald-600">
                         {vehicle.models}
                       </p>
                     </div>
@@ -126,7 +218,7 @@ export default async function HomePage() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </article>
               </ScrollReveal>
             ))}
           </div>
@@ -158,11 +250,17 @@ export default async function HomePage() {
       </section>
 
       {/* Gallery Preview - Moments from Our Tours */}
-      <section className="py-20 bg-white">
+      <section
+        aria-labelledby="gallery-heading"
+        className="py-8 sm:py-12 bg-white"
+      >
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2
+                id="gallery-heading"
+                className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
+              >
                 Moments from Our Tours
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -174,7 +272,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto mb-10">
             {[
               {
-                src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+                src: "https://images.unsplash.com/photo-1609681980718-340e7f4b11d7?q=80&w=840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 alt: "Sigiriya Rock Fortress",
                 title: "Sigiriya",
               },
@@ -221,6 +319,7 @@ export default async function HomePage() {
                     alt={photo.alt}
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

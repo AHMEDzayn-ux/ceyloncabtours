@@ -3,12 +3,14 @@
  */
 
 export const aboutContent = {
-  title: 'About Ceylon Cabs',
+  title: 'About CeylonCabTours',
   subtitle: 'Your Trusted Travel Partner in Sri Lanka',
   
   mission: 'To provide safe, comfortable, and reliable transportation services while showcasing the beauty and culture of Sri Lanka to travelers from around the world.',
   
-  story: `Ceylon Cabs was founded with a passion for hospitality and a deep love for Sri Lanka. What started as a small family-run business has grown into one of the most trusted cab services in the country.
+  vision: 'To become the most trusted and preferred transportation partner for travelers exploring Sri Lanka, known for exceptional service, local expertise, and creating unforgettable travel experiences.',
+  
+  story: `CeylonCabTours was founded with a passion for hospitality and a deep love for Sri Lanka. What started as a small family-run business has grown into one of the most trusted cab services in the country.
 
 Our team of experienced drivers knows every corner of this beautiful island - from the ancient ruins of Anuradhapura to the pristine beaches of the south coast, from the misty hills of Nuwara Eliya to the wildlife-rich jungles of Yala.
 
@@ -57,6 +59,7 @@ We take pride in not just being drivers, but being your local guides, sharing st
   offices: [
     {
       name: 'Colombo Office',
+      location: 'Colombo',
       address: 'Colombo, Sri Lanka',
       phone: '+94 77 123 4567',
       whatsapp: '94771234567',
@@ -65,6 +68,7 @@ We take pride in not just being drivers, but being your local guides, sharing st
     },
     {
       name: 'Badulla Office',
+      location: 'Badulla',
       address: 'Badulla, Sri Lanka',
       phone: '+94 77 987 6543',
       whatsapp: '94779876543',

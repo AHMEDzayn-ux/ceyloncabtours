@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
 import { generateLocalBusinessSchema } from "@/lib/schemas/structuredData";
 
 const inter = Inter({
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   title: {
-    default: "Ceylon Cabs | Premium Cab Service & Tours in Sri Lanka",
-    template: "%s | Ceylon Cabs",
+    default: "CeylonCabTours | Premium Cab Service & Tours in Sri Lanka",
+    template: "%s | CeylonCabTours",
   },
   description:
     "Reliable cab service for airport transfers, city rides, and custom tours across Sri Lanka. Professional drivers, comfortable vehicles, and personalized service.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     "airport transfer Sri Lanka",
     "Colombo taxi",
     "Sri Lanka tours",
-    "Ceylon Cabs",
+    "CeylonCabTours",
     "Sri Lanka transportation",
     "Kandy taxi service",
     "Galle cab service",
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     "tour packages Sri Lanka",
     "airport pickup Colombo",
   ],
-  authors: [{ name: "Ceylon Cabs" }],
-  creator: "Ceylon Cabs",
-  publisher: "Ceylon Cabs",
+  authors: [{ name: "CeylonCabTours" }],
+  creator: "CeylonCabTours",
+  publisher: "CeylonCabTours",
   formatDetection: {
     email: false,
     address: false,
@@ -46,22 +47,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_LK",
     url: process.env.NEXT_PUBLIC_SITE_URL,
-    siteName: "Ceylon Cabs",
-    title: "Ceylon Cabs | Premium Cab Service & Tours in Sri Lanka",
+    siteName: "CeylonCabTours",
+    title: "CeylonCabTours | Premium Cab Service & Tours in Sri Lanka",
     description:
-      "Explore Sri Lanka in comfort and style with Ceylon Cabs. Professional transportation and custom tours.",
+      "Explore Sri Lanka in comfort and style with CeylonCabTours. Professional transportation and custom tours.",
     images: [
       {
         url: "/images/hero/hero-1.jpg",
         width: 1200,
         height: 630,
-        alt: "Ceylon Cabs - Premium Transportation in Sri Lanka",
+        alt: "CeylonCabTours - Premium Transportation in Sri Lanka",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ceylon Cabs | Premium Cab Service Sri Lanka",
+    title: "CeylonCabTours | Premium Cab Service Sri Lanka",
     description: "Reliable transportation and custom tours across Sri Lanka",
     images: ["/images/hero/hero-1.jpg"],
   },
@@ -105,8 +106,9 @@ export default function RootLayout({
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="apple-mobile-web-app-title" content="CeylonCabs" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="apple-mobile-web-app-title" content="CeylonCabTours" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <script
@@ -118,6 +120,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

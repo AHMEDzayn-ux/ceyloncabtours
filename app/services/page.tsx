@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "24/7 cab service",
   ],
   openGraph: {
-    title: "Our Services | Ceylon Cabs",
+    title: "Our Services | CeylonCabTours",
     description:
       "Professional transportation services across Sri Lanka. Airport transfers, tours, and custom packages.",
     type: "website",
@@ -274,7 +274,7 @@ export default function ServicesPage() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose Ceylon Cabs & Tours?
+                Why Choose CeylonCabTours?
               </h2>
             </div>
           </ScrollReveal>

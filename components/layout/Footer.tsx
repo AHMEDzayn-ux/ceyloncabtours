@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
-              Ceylon<span className="text-emerald-400">Cabs</span>
+              Ceylon<span className="text-emerald-400">CabTours</span>
             </h3>
             <p className="text-xs sm:text-sm mb-3 sm:mb-4 text-gray-400">
               Sri Lanka's most trusted cab and taxi service. Specializing in
@@ -70,10 +70,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/tours"
+                  href="/destinations"
                   className="hover:text-emerald-400 transition"
                 >
-                  Tours
+                  Destinations
                 </Link>
               </li>
               <li>
@@ -137,27 +137,6 @@ export default function Footer() {
                   className="hover:text-emerald-400 transition"
                 >
                   {aboutContent.offices[0].phone}
-                </a>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <a
-                  href={`mailto:${aboutContent.offices[0].email}`}
-                  className="hover:text-emerald-400 transition"
-                >
-                  {aboutContent.offices[0].email}
                 </a>
               </li>
               <li className="flex items-start">
@@ -237,27 +216,6 @@ export default function Footer() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <a
-                  href={`mailto:${aboutContent.offices[1].email}`}
-                  className="hover:text-emerald-400 transition"
-                >
-                  {aboutContent.offices[1].email}
-                </a>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
@@ -270,7 +228,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} Ceylon Cabs. All rights reserved.
+            &copy; {currentYear} CeylonCabTours. All rights reserved.
           </p>
           <p className="mt-2 text-emerald-400 font-medium">
             Your Trusted Cab & Tour Service in Sri Lanka - Available 24/7

@@ -32,7 +32,7 @@ export default function ContactPage() {
         images={[
           {
             src: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80",
-            alt: "Contact Ceylon Cabs",
+            alt: "Contact CeylonCabTours",
           },
           {
             src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1600&q=80",
@@ -185,32 +185,6 @@ export default function ContactPage() {
                         className="text-emerald-600 hover:text-emerald-700 font-medium"
                       >
                         {aboutContent.offices[1].phone}
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg
-                      className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">
-                        Email
-                      </p>
-                      <a
-                        href={`mailto:${aboutContent.offices[1].email}`}
-                        className="text-emerald-600 hover:text-emerald-700 font-medium"
-                      >
-                        {aboutContent.offices[1].email}
                       </a>
                     </div>
                   </div>

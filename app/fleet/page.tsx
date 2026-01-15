@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedHero from "@/components/shared/AnimatedHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     "Toyota KDH rental",
   ],
   openGraph: {
-    title: "Our Fleet | Ceylon Cabs",
+    title: "Our Fleet | CeylonCabTours",
     description:
       "Premium vehicles for every journey. Sedans, SUVs, vans, and luxury cars available.",
     type: "website",
@@ -79,21 +80,6 @@ const fleetData = {
   ],
   sedansWagons: [
     {
-      name: "Nissan Sunny FB15",
-      variant: "Super Saloon",
-      capacity: "4 Passengers",
-      features: [
-        "Power Steering",
-        "Air Conditioning",
-        "Comfortable",
-        "Fuel Efficient",
-      ],
-      description:
-        'Classic sedan known locally as "PS Car" - perfect for city tours and airport transfers.',
-      image: "/images/fleet/nissan-sunny-fb15.jpg",
-      note: "Popular choice for reliability",
-    },
-    {
       name: "Honda Fit Shuttle",
       variant: "Hybrid Wagon",
       capacity: "5 Passengers",
@@ -114,6 +100,20 @@ const fleetData = {
       ],
       description: "Modern compact sedan ideal for couples and small families.",
       image: "/images/fleet/perodua-bezza.jpg",
+    },
+    {
+      name: "Toyota Prius",
+      variant: "Hybrid Sedan",
+      capacity: "4 Passengers",
+      features: [
+        "Eco-Friendly Hybrid",
+        "Premium Comfort",
+        "Silent Operation",
+        "Modern Technology",
+      ],
+      description:
+        "Luxury hybrid sedan offering premium comfort and exceptional fuel efficiency.",
+      image: "/images/fleet/toyota-prius.jpg",
     },
   ],
   smallCars: [
@@ -224,13 +224,16 @@ export default function FleetPage() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 {/* h-full ensures all cards in the row are same height */}
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
-                  <div className="relative h-48 bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center p-4">
+                  <div className="relative h-48 bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center overflow-hidden">
                     {vehicle.image &&
                     vehicle.image.startsWith("/images/fleet/") ? (
-                      <img
+                      <Image
                         src={vehicle.image}
                         alt={vehicle.name}
-                        className="object-contain w-full h-full drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
                       <span className="text-6xl">🚐</span>
@@ -312,13 +315,16 @@ export default function FleetPage() {
             {fleetData.sedansWagons.map((vehicle, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
-                  <div className="relative h-48 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
+                  <div className="relative h-48 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center overflow-hidden">
                     {vehicle.image &&
                     vehicle.image.startsWith("/images/fleet/") ? (
-                      <img
+                      <Image
                         src={vehicle.image}
                         alt={vehicle.name}
-                        className="object-contain w-full h-full drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
                       <span className="text-6xl">🚗</span>
@@ -385,13 +391,16 @@ export default function FleetPage() {
             {fleetData.smallCars.map((vehicle, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
-                  <div className="relative h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-4">
+                  <div className="relative h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center overflow-hidden">
                     {vehicle.image &&
                     vehicle.image.startsWith("/images/fleet/") ? (
-                      <img
+                      <Image
                         src={vehicle.image}
                         alt={vehicle.name}
-                        className="object-contain w-full h-full drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
                       <span className="text-5xl">🚙</span>

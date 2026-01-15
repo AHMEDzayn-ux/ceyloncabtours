@@ -15,11 +15,15 @@ export default function ScrollReveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 0.25,
+  duration = 0.35,
   className = "",
 }: ScrollRevealProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px" });
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-80px",
+    amount: 0.2,
+  });
 
   const directions = {
     up: { y: 60, x: 0 },
