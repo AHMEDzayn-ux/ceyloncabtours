@@ -39,6 +39,35 @@ html {
   }
 }
 
+/* Force GPU acceleration for transforms and opacity */
+.transform,
+[class*="translate"],
+[class*="scale"],
+[class*="rotate"],
+[style*="transform"] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize animations for compositing */
+@media (prefers-reduced-motion: no-preference) {
+  .transition-all,
+  .transition-transform,
+  .transition-opacity {
+    will-change: transform, opacity;
+  }
+  
+  .transition-all:hover,
+  .transition-transform:hover,
+  .transition-opacity:hover,
+  .transition-all:focus,
+  .transition-transform:focus,
+  .transition-opacity:focus {
+    will-change: auto;
+  }
+}
+
 /* Custom Scrollbar - Emerald Theme */
 ::-webkit-scrollbar {
   width: 12px;
@@ -59,63 +88,75 @@ html {
 }
 
 @keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); } /* Scales up 5% */
+  0%, 100% { 
+    transform: scale(1) translateZ(0); 
+  }
+  50% { 
+    transform: scale(1.05) translateZ(0); 
+  }
 }
 
 .animate-beat {
   animation: beat 2s infinite ease-in-out;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Scroll indicator animation */
 @keyframes scroll {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(8px);
+    transform: translateY(8px) translateZ(0);
     opacity: 0;
   }
 }
 
 .animate-scroll {
   animation: scroll 1.5s ease-in-out infinite;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 /* Fade-in-up animation for scroll reveals */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
   }
 }
 
 .animate-fadeInUp {
   animation: fadeInUp 0.6s ease-out forwards;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 /* Smooth transitions for all interactive elements */
 a, button, input, select, textarea {
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Page transition effect */
 @keyframes pageLoad {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
   }
 }
 
 body {
   animation: pageLoad 0.5s ease-out;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }

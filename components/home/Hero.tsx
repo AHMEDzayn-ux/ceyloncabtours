@@ -63,7 +63,12 @@ export default function Hero() {
               src={img.src}
               alt={img.alt}
               fill
-              priority={index === 0}
+              priority={index === 0 || index === 1}
+              loading={index === 0 || index === 1 ? "eager" : "lazy"}
+              fetchPriority={
+                index === 0 ? "high" : index === 1 ? "high" : "low"
+              }
+              quality={70}
               sizes="100vw"
               className="object-cover object-center"
               style={{

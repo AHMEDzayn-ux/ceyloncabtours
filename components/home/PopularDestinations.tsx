@@ -66,6 +66,9 @@ export default function PopularDestinations() {
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
               }`}
+              style={{
+                willChange: visibleCards[index] ? "auto" : "transform, opacity",
+              }}
             >
               <DestinationCard tour={tour} />
             </div>

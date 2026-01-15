@@ -322,6 +322,7 @@ export default function FleetPage() {
                         src={vehicle.image}
                         alt={vehicle.name}
                         fill
+                        quality={65}
                         loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -398,6 +399,7 @@ export default function FleetPage() {
                         src={vehicle.image}
                         alt={vehicle.name}
                         fill
+                        quality={65}
                         loading="lazy"
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-300"

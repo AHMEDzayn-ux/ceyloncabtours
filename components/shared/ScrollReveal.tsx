@@ -54,7 +54,13 @@ export default function ScrollReveal({
       transition={{
         duration,
         delay,
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
+        opacity: { duration: duration * 0.8 },
+        x: { duration },
+        y: { duration },
+      }}
+      style={{
+        willChange: isInView ? "auto" : "transform, opacity",
       }}
       className={className}
     >

@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { generateBreadcrumbSchema } from "@/lib/schemas/structuredData";
 
-// Lazy load components with SSR false for client-only components
+// Lazy load all client components for optimal code splitting
 const Hero = dynamic(() => import("@/components/home/Hero"), {
   ssr: true,
   loading: () => (
@@ -172,6 +172,7 @@ export default async function HomePage() {
                       src={vehicle.image}
                       alt={vehicle.category}
                       fill
+                      quality={65}
                       sizes="(max-width: 768px) 100vw, 33vw"
                       loading="lazy"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -318,6 +319,7 @@ export default async function HomePage() {
                     src={photo.src}
                     alt={photo.alt}
                     fill
+                    quality={60}
                     sizes="(max-width: 768px) 50vw, 25vw"
                     loading="lazy"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
