@@ -39,11 +39,11 @@ export default function BookingForm() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-4 md:mb-6">
               Get in Touch
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 px-4">
               Share your details and we&apos;ll connect with you via WhatsApp to
               discuss your travel plans
             </p>
@@ -51,14 +51,14 @@ export default function BookingForm() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-10 md:p-16"
+            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-8 md:p-12"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm sm:text-base font-semibold text-gray-700 mb-2 sm:mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Name *
                 </label>
@@ -69,7 +69,7 @@ export default function BookingForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                   placeholder="John Smith"
                 />
               </div>
@@ -78,7 +78,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm sm:text-base font-semibold text-gray-700 mb-2 sm:mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Phone Number *
                 </label>
@@ -89,7 +89,7 @@ export default function BookingForm() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                   placeholder="+94 77 123 4567"
                 />
               </div>
@@ -98,7 +98,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="pickup"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Pickup Location (Optional)
                 </label>
@@ -108,7 +108,7 @@ export default function BookingForm() {
                   name="pickup"
                   value={formData.pickup}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                   placeholder="e.g., Colombo Airport"
                 />
               </div>
@@ -117,7 +117,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="destination"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Destination (Optional)
                 </label>
@@ -127,7 +127,7 @@ export default function BookingForm() {
                   name="destination"
                   value={formData.destination}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                   placeholder="e.g., Kandy, Ella"
                 />
               </div>
@@ -136,7 +136,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="date"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Travel Date (Optional)
                 </label>
@@ -147,7 +147,7 @@ export default function BookingForm() {
                   value={formData.date}
                   onChange={handleChange}
                   min={new Date().toISOString().split("T")[0]}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                 />
               </div>
 
@@ -155,7 +155,7 @@ export default function BookingForm() {
               <div>
                 <label
                   htmlFor="passengers"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Number of Passengers (Optional)
                 </label>
@@ -164,7 +164,7 @@ export default function BookingForm() {
                   name="passengers"
                   value={formData.passengers}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition text-gray-900 text-sm sm:text-base"
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(
                     (num) => (
@@ -180,7 +180,7 @@ export default function BookingForm() {
               <div className="md:col-span-2">
                 <label
                   htmlFor="notes"
-                  className="block text-base font-semibold text-gray-700 mb-3"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                 >
                   Your Travel Plans or Questions (Optional)
                 </label>
@@ -190,7 +190,7 @@ export default function BookingForm() {
                   rows={4}
                   value={formData.notes}
                   onChange={handleChange}
-                  className="w-full px-5 py-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition resize-none text-gray-900"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition resize-none text-gray-900 text-sm sm:text-base"
                   placeholder="Tell us about your travel plans, tour interests, or any questions you have..."
                 />
               </div>
@@ -198,12 +198,12 @@ export default function BookingForm() {
 
             <button
               type="submit"
-              className="w-full mt-12 bg-emerald-500 hover:bg-emerald-600 text-white py-5 rounded-lg font-bold text-lg transition shadow-lg"
+              className="w-full mt-6 sm:mt-8 bg-emerald-500 hover:bg-emerald-600 text-white py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base md:text-lg transition shadow-lg"
             >
               Continue to WhatsApp
             </button>
 
-            <p className="text-center text-gray-500 mt-6">
+            <p className="text-center text-gray-500 mt-3 sm:mt-4 text-xs sm:text-sm">
               You&apos;ll be redirected to WhatsApp to discuss your travel plans
             </p>
           </form>

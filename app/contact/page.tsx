@@ -275,7 +275,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                   >
                     Full Name <span className="text-red-500">*</span>
                   </label>
@@ -285,14 +285,14 @@ export default function ContactPage() {
                     name="name"
                     required
                     placeholder="John Doe"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition text-sm sm:text-base"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                   >
                     Email
                   </label>
@@ -301,14 +301,14 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition text-sm sm:text-base"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                   >
                     Phone Number <span className="text-red-500">*</span>
                   </label>
@@ -318,14 +318,14 @@ export default function ContactPage() {
                     name="phone"
                     required
                     placeholder="+94 75 123 4567"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition text-sm sm:text-base"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2"
                   >
                     Message <span className="text-red-500">*</span>
                   </label>
@@ -335,13 +335,13 @@ export default function ContactPage() {
                     required
                     rows={5}
                     placeholder="Tell us how we can help you..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none text-sm sm:text-base"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 sm:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
                   <svg
                     className="w-5 h-5"
