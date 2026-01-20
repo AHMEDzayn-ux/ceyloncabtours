@@ -57,17 +57,17 @@ export default function GalleryPage() {
       />
 
       {/* Gallery Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="text-center mb-10 sm:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-16">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-4">
             Our Journey Through Sri Lanka
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
             Explore stunning landscapes, cultural heritage, and unforgettable
             moments captured during our tours across the pearl of the Indian
             Ocean
           </p>
-          <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto mt-6"></div>
+          <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto mt-4 sm:mt-6"></div>
         </div>
 
         {images.length > 0 ? (
@@ -89,10 +89,10 @@ export default function GalleryPage() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            <h3 className="text-base sm:text-xl font-semibold text-gray-700 mb-2">
               No images yet
             </h3>
-            <p className="text-gray-500">
+            <p className="text-xs sm:text-sm text-gray-500">
               Gallery images will appear here once added
             </p>
           </div>

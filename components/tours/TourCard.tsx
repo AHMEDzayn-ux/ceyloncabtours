@@ -8,7 +8,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
   return (
     <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer bg-white flex flex-col">
       {/* Image with Overlay */}
-      <div className="relative h-80 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-end overflow-hidden">
+      <div className="relative h-48 sm:h-80 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-end overflow-hidden">
         {tour.heroImage && (
           <div className="w-full h-full relative overflow-hidden">
             <img
@@ -32,15 +32,15 @@ export default function TourCard({ tour }: { tour: Tour }) {
           </div>
         )}
         {/* Content Overlay at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-          <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg text-left">
+        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6 z-20">
+          <h3 className="text-base sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2 drop-shadow-lg text-left">
             {tour.title}
           </h3>
         </div>
       </div>
       {/* Description below image */}
-      <div className="p-6 flex-1 flex items-center">
-        <p className="text-gray-700 text-base mb-0 min-h-[56px] text-left w-full">
+      <div className="p-3 sm:p-6 flex-1 flex items-center">
+        <p className="text-gray-700 text-xs sm:text-sm md:text-base mb-0 min-h-[40px] sm:min-h-[56px] text-left w-full">
           {tour.shortDescription}
         </p>
       </div>

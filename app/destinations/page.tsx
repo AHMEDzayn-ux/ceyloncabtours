@@ -53,7 +53,7 @@ export default async function ToursPage() {
         ]}
       />
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 sm:py-16">
         {/* Cultural Tours */}
         {culturalTours.length > 0 && (
           <section className="mb-16">
@@ -131,11 +131,11 @@ export default async function ToursPage() {
         )}
 
         {/* Custom Tours CTA */}
-        <section className="bg-white rounded-2xl p-12 text-center mt-16 shadow-md border border-gray-100">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+        <section className="bg-white rounded-2xl p-6 sm:p-12 text-center mt-10 sm:mt-16 shadow-md border border-gray-100">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-gray-900">
             Need a Custom Itinerary?
           </h2>
-          <p className="text-lg mb-8 text-gray-700">
+          <p className="text-xs sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-700">
             We specialize in personalized tours. Tell us your interests, budget,
             and duration – we'll create the perfect Sri Lankan adventure for
             you.
@@ -144,7 +144,7 @@ export default async function ToursPage() {
             href={generateTourInquiryURL("Custom Tour Package")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-emerald-500 text-white px-8 py-4 rounded-lg hover:bg-emerald-600 transition font-bold shadow"
+            className="inline-block bg-emerald-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg hover:bg-emerald-600 transition font-bold text-sm sm:text-base shadow"
           >
             Request Custom Tour
           </a>

@@ -85,9 +85,9 @@ export default function Hero() {
 
       {/* --- Main Content --- */}
       <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center items-center">
-        <div className="max-w-4xl w-full mx-auto text-center flex flex-col justify-center h-full pt-12 sm:pt-0">
+        <div className="max-w-4xl w-full mx-auto text-center flex flex-col justify-center h-full pt-16 sm:pt-0">
           {/* Content Wrapper to vertically center visually */}
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-4 sm:space-y-6">
             {/* Title Section */}
             <div
               className={`transition-all duration-1000 ease-out transform ${
@@ -96,12 +96,12 @@ export default function Hero() {
                   : "translate-y-12 opacity-0"
               }`}
             >
-              <h1 className="text-center font-bold text-white tracking-tight drop-shadow-2xl px-1">
+              <h1 className="text-center font-bold text-white tracking-tight drop-shadow-2xl px-2">
                 {/* Responsive Font Sizing: Smaller on mobile, massive on desktop */}
-                <span className="block text-4xl sm:text-6xl md:text-7xl mb-2">
+                <span className="block text-2xl sm:text-4xl md:text-6xl lg:text-7xl mb-1 sm:mb-2">
                   Your Trusted Cab Service
                 </span>
-                <span className="block text-4xl sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+                <span className="block text-2xl sm:text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
                   In Sri Lanka
                 </span>
               </h1>
@@ -115,7 +115,7 @@ export default function Hero() {
                   : "translate-y-12 opacity-0"
               }`}
             >
-              <p className="text-center text-base sm:text-lg md:text-xl text-gray-200 max-w-lg leading-normal sm:leading-relaxed font-light px-4 opacity-90">
+              <p className="text-center text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl leading-snug sm:leading-relaxed font-light px-4 opacity-90">
                 Sri Lanka&apos;s most{" "}
                 <span className="font-medium text-white">
                   trusted cab service
@@ -130,49 +130,45 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div
-              className={`flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center px-2 transition-all duration-1000 delay-300 ease-out transform ${
+              className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 transition-all duration-1000 delay-300 ease-out transform ${
                 loaded
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"
               }`}
             >
               {/* Primary Action */}
-              <div className="w-full sm:w-auto relative group">
-                <Link
-                  href="/#booking"
-                  className="relative flex items-center justify-center w-full sm:w-auto px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px] bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-bold text-base sm:text-lg animate-beat transition-colors duration-300 shadow-lg shadow-emerald-900/20"
+              <Link
+                href="/#booking"
+                className="relative flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-bold text-sm sm:text-base md:text-lg animate-beat transition-colors duration-300 shadow-lg shadow-emerald-900/20 group"
+              >
+                Book Your Ride
+                <svg
+                  className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  Book Your Ride
-                  <svg
-                    className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </Link>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </Link>
 
               {/* Secondary Action */}
-              <div className="w-full sm:w-auto">
-                <Link
-                  href="/tours"
-                  className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 sm:px-8 sm:py-4 min-w-[200px] bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-emerald-400/50 text-white hover:text-emerald-300 rounded-full font-semibold text-base sm:text-lg transition-all duration-300"
-                >
-                  Explore Tours
-                </Link>
-              </div>
+              <Link
+                href="/tours"
+                className="flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-emerald-400/50 text-white hover:text-emerald-300 rounded-full font-semibold text-sm sm:text-base md:text-lg transition-all duration-300"
+              >
+                Explore Tours
+              </Link>
             </div>
 
             {/* Features Grid */}
             <ul
-              className={`grid grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-3 sm:gap-4 max-w-sm sm:max-w-3xl mx-auto pt-4 transition-all duration-1000 delay-500 ease-out transform ${
+              className={`grid grid-cols-4 gap-2 sm:gap-4 max-w-md sm:max-w-3xl mx-auto pt-3 sm:pt-6 transition-all duration-1000 delay-500 ease-out transform ${
                 loaded
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"
@@ -230,11 +226,11 @@ export default function Hero() {
               ].map((feature, index) => (
                 <li
                   key={index}
-                  className="group flex flex-col items-center justify-start gap-1 sm:gap-2 text-center p-1 sm:p-2 rounded-xl hover:bg-white/5 transition-colors"
+                  className="group flex flex-col items-center justify-start gap-0.5 sm:gap-1 text-center p-0.5 sm:p-2 rounded-xl hover:bg-white/5 transition-colors"
                 >
                   <div className="flex-shrink-0 text-emerald-400 group-hover:text-emerald-300 transition-colors">
                     <svg
-                      className="w-6 h-6 sm:w-8 sm:h-8"
+                      className="w-5 h-5 sm:w-7 sm:h-7"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -243,10 +239,10 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-white text-sm sm:text-base font-semibold group-hover:text-emerald-100 transition-colors">
+                    <h3 className="text-white text-[10px] sm:text-sm font-semibold group-hover:text-emerald-100 transition-colors leading-tight">
                       {feature.title}
                     </h3>
-                    <span className="text-gray-400 text-xs sm:text-sm block mt-0.5">
+                    <span className="text-gray-400 text-[8px] sm:text-xs block">
                       {feature.desc}
                     </span>
                   </div>

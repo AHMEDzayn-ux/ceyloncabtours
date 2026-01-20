@@ -51,28 +51,28 @@ export default function AboutPage() {
       />
 
       {/* Mission & Vision Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="py-8 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12">
             <ScrollReveal>
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 shadow-lg">
-                <div className="text-5xl mb-4">🎯</div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 sm:p-8 shadow-lg">
+                <div className="text-3xl sm:text-5xl mb-2 sm:mb-4">🎯</div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">
                   Our Mission
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
                   {aboutContent.mission}
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
-                <div className="text-5xl mb-4">👁️</div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-8 shadow-lg">
+                <div className="text-3xl sm:text-5xl mb-2 sm:mb-4">👁️</div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">
                   Our Vision
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
                   {aboutContent.vision}
                 </p>
               </div>
@@ -82,27 +82,27 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-5xl">
+      <section className="py-8 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
                 Our Story
               </h2>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-              <p className="text-gray-700 leading-relaxed text-lg mb-6">
+            <div className="bg-white rounded-2xl p-4 sm:p-8 md:p-12 shadow-lg">
+              <p className="text-xs sm:text-sm md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                 At YasiruCeylonTours, customer satisfaction is at the heart of
                 everything we do. We take pride in delivering exceptional
                 transportation experiences that exceed expectations. Our journey
                 has been shaped by countless positive feedback from travelers
                 who have trusted us with their Sri Lankan adventures.
               </p>
-              <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              <p className="text-xs sm:text-sm md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
                 We&apos;ve had the privilege of serving hundreds of satisfied
                 customers - from solo travelers discovering ancient ruins and
                 wildlife sanctuaries, to families creating unforgettable
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 on our punctual airport transfers. Every positive review and
                 repeat customer reinforces our commitment to excellence.
               </p>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-xs sm:text-sm md:text-lg text-gray-700 leading-relaxed">
                 Our success is measured by the smiles of our customers, the
                 seamless journeys we provide, and the trust we&apos;ve built
                 over the years. With a modern fleet of well-maintained vehicles
@@ -125,18 +125,18 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="py-8 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
                 Why Choose YasiruCeylonTours
               </h2>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {[
               {
                 icon: "👨‍✈️",
@@ -176,12 +176,14 @@ export default function AboutPage() {
               },
             ].map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="text-3xl sm:text-5xl mb-2 sm:mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-base sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -192,29 +194,29 @@ export default function AboutPage() {
       </section>
 
       {/* Office Locations */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="py-8 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
                 Our Offices
               </h2>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto">
             {aboutContent.offices.map((office, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <span className="text-3xl">📍</span>
+                <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
+                    <span className="text-2xl sm:text-3xl">📍</span>
                     {office.location} Office
                   </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="flex items-start gap-2 sm:gap-3">
                       <svg
-                        className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-1"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -292,26 +294,26 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
-        <div className="container mx-auto px-6">
+      <section className="py-8 sm:py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 sm:mb-4">
               Ready to Experience the Best in Sri Lankan Transportation?
             </h2>
-            <p className="text-lg text-emerald-50/90 mb-8">
+            <p className="text-xs sm:text-base md:text-lg text-emerald-50/90 mb-6 sm:mb-8">
               Book your ride today and discover why thousands of travelers trust
               YasiruCeylonTours for their journeys.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
                 href="/#booking"
-                className="inline-block px-8 py-3 bg-white text-emerald-700 rounded-full font-bold hover:bg-emerald-50 transition-all hover:scale-105 shadow-lg"
+                className="inline-block px-6 py-2.5 sm:px-8 sm:py-3 bg-white text-emerald-700 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-50 transition-all hover:scale-105 shadow-lg"
               >
                 Book Now
               </Link>
               <Link
                 href="/contact"
-                className="inline-block px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-bold hover:bg-white/10 transition-all"
+                className="inline-block px-6 py-2.5 sm:px-8 sm:py-3 bg-transparent border-2 border-white text-white rounded-full font-bold text-sm sm:text-base hover:bg-white/10 transition-all"
               >
                 Contact Us
               </Link>

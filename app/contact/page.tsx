@@ -46,29 +46,29 @@ export default function ContactPage() {
       />
 
       {/* Contact Information Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="py-8 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
                 Get In Touch
               </h2>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto">
             {/* Kandy Office */}
             <ScrollReveal delay={0.1}>
-              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <span className="text-3xl">🏢</span>
+              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
+                  <span className="text-2xl sm:text-3xl">🏢</span>
                   Kandy Office
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-2 sm:gap-3">
                     <svg
-                      className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -87,17 +87,17 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-0.5 sm:mb-1">
                         Address
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {aboutContent.offices[0].address}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2 sm:gap-3">
                     <svg
-                      className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -110,20 +110,22 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-0.5 sm:mb-1">
                         Phone
                       </p>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-1 sm:gap-1.5">
                         <a
                           href="tel:+94711372105"
-                          className="text-emerald-600 hover:text-emerald-700 font-medium"
+                          className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
                           +94 71 137 2105
                         </a>
-                        <span className="text-gray-600">/</span>
+                        <span className="text-xs sm:text-sm text-gray-600">
+                          /
+                        </span>
                         <a
                           href="tel:+94728242758"
-                          className="text-emerald-600 hover:text-emerald-700 font-medium"
+                          className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
                           +94 72 824 2758
                         </a>
@@ -136,15 +138,15 @@ export default function ContactPage() {
 
             {/* Badulla Office */}
             <ScrollReveal delay={0.2}>
-              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <span className="text-3xl">🏢</span>
+              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
+                  <span className="text-2xl sm:text-3xl">🏢</span>
                   Badulla Office
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-2 sm:gap-3">
                     <svg
-                      className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -163,17 +165,17 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-0.5 sm:mb-1">
                         Address
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {aboutContent.offices[1].address}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2 sm:gap-3">
                     <svg
-                      className="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -186,20 +188,22 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-0.5 sm:mb-1">
                         Phone
                       </p>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-1 sm:gap-1.5">
                         <a
                           href="tel:+94771183257"
-                          className="text-emerald-600 hover:text-emerald-700 font-medium"
+                          className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
                           +94 77 118 3257
                         </a>
-                        <span className="text-gray-600">/</span>
+                        <span className="text-xs sm:text-sm text-gray-600">
+                          /
+                        </span>
                         <a
                           href="tel:+94771183257"
-                          className="text-emerald-600 hover:text-emerald-700 font-medium"
+                          className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
                           +94 77 118 3257
                         </a>
@@ -214,18 +218,18 @@ export default function ContactPage() {
       </section>
 
       {/* WhatsApp Quick Response */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="py-8 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
                 Quick Response via WhatsApp
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-sm sm:text-lg text-gray-600">
                 Get instant responses to your queries by contacting us on
                 WhatsApp
               </p>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto mt-4"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto mt-3 sm:mt-4"></div>
             </div>
           </ScrollReveal>
 
@@ -236,10 +240,10 @@ export default function ContactPage() {
                   href={`https://wa.me/${WHATSAPP_NUMBERS.kandy}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <svg
-                    className="w-7 h-7"
+                    className="w-5 h-5 sm:w-7 sm:h-7"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -254,19 +258,19 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="py-8 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
                 Send us a Message
               </h2>
-              <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-10">
+            <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-8 md:p-10">
               <form onSubmit={handleWhatsAppSubmit} className="space-y-6">
                 <div>
                   <label

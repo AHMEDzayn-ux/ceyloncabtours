@@ -77,15 +77,15 @@ export default function AnimatedHero({
             transition={{ duration: 0.8 }}
           >
             {subtitle && (
-              <p className="text-emerald-400 font-semibold text-sm md:text-base uppercase tracking-wider mb-4">
+              <p className="text-emerald-400 font-semibold text-sm sm:text-base md:text-lg uppercase tracking-wider mb-2 sm:mb-4">
                 {subtitle}
               </p>
             )}
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl">
               {title}
             </h1>
             {description && (
-              <p className="text-xl md:text-2xl text-emerald-50 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-emerald-50 leading-snug sm:leading-relaxed px-2">
                 {description}
               </p>
             )}

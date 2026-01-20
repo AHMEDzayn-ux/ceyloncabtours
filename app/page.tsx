@@ -101,13 +101,11 @@ export default async function HomePage() {
     console.log("Supabase not configured yet - reviews will be empty");
   }
 
-  // Load gallery images and select random 8 for preview
+  // Load gallery images and select first 8 for preview
   const allGalleryImages = loadGalleryImages();
   const galleryPreview =
     allGalleryImages.length > 0
-      ? allGalleryImages
-          .sort(() => Math.random() - 0.5) // Shuffle array
-          .slice(0, 8) // Take first 8
+      ? allGalleryImages.slice(0, 8) // Take first 8
       : [
           // Fallback images if no gallery images exist
           {

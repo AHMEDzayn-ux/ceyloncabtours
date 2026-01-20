@@ -182,19 +182,19 @@ export default function FleetPage() {
           },
         ]}
       >
-        <div className="flex flex-wrap gap-4 justify-center mt-6">
-          <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">
+        <div className="flex flex-wrap gap-2 sm:gap-4 justify-center mt-4 sm:mt-6">
+          <div className="bg-emerald-500/20 backdrop-blur-sm px-3 sm:px-6 py-1.5 sm:py-2 rounded-full border border-emerald-400/30">
+            <p className="text-white text-xs sm:text-sm font-semibold">
               11 Vehicle Models
             </p>
           </div>
-          <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">
+          <div className="bg-emerald-500/20 backdrop-blur-sm px-3 sm:px-6 py-1.5 sm:py-2 rounded-full border border-emerald-400/30">
+            <p className="text-white text-xs sm:text-sm font-semibold">
               All Well-Maintained
             </p>
           </div>
-          <div className="bg-emerald-500/20 backdrop-blur-sm px-6 py-2 rounded-full border border-emerald-400/30">
-            <p className="text-white text-sm font-semibold">
+          <div className="bg-emerald-500/20 backdrop-blur-sm px-3 sm:px-6 py-1.5 sm:py-2 rounded-full border border-emerald-400/30">
+            <p className="text-white text-xs sm:text-sm font-semibold">
               Professional Drivers
             </p>
           </div>
@@ -202,18 +202,18 @@ export default function FleetPage() {
       </AnimatedHero>
 
       {/* Vans Section */}
-      <section className="py-12 bg-white">
+      <section className="py-8 sm:py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           {/* Compact Section Header */}
-          <div className="flex items-center gap-4 mb-8 border-b pb-4 border-gray-100">
-            <div className="bg-emerald-100 p-3 rounded-2xl">
-              <span className="text-3xl">🚐</span>
+          <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 border-b pb-3 sm:pb-4 border-gray-100">
+            <div className="bg-emerald-100 p-2 sm:p-3 rounded-2xl">
+              <span className="text-2xl sm:text-3xl">🚐</span>
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                 Luxury Vans
               </h2>
-              <p className="text-sm text-gray-500">
+              <p className="text-xs sm:text-sm text-gray-500">
                 Spacious travel for groups &amp; families
               </p>
             </div>

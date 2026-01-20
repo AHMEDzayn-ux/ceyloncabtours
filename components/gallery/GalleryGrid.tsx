@@ -84,18 +84,6 @@ function GalleryItem({
                 />
               </svg>
             </motion.div>
-
-            {/* Image Alt Text on Hover */}
-            {image.alt && (
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileHover={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-white text-xs sm:text-sm font-medium px-4 py-2 bg-black/50 backdrop-blur-sm rounded-full hidden sm:block"
-              >
-                {image.alt}
-              </motion.p>
-            )}
           </motion.div>
 
           {/* Mobile Tap Indicator */}

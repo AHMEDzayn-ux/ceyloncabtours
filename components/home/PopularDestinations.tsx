@@ -77,7 +77,7 @@ export default function PopularDestinations() {
 
         <div className="text-center mt-10">
           <Link
-            href="/tours"
+            href="/destinations"
             className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold text-lg group transition-all"
           >
             View All Destinations

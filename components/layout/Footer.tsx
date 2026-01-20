@@ -7,27 +7,27 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-10">
+        {/* Main Grid - 2 columns on mobile, 4 on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Company Info - Full width on mobile */}
+          <div className="col-span-2 lg:col-span-1 mb-2 sm:mb-0">
+            <h3 className="text-white text-lg sm:text-xl font-bold mb-2 sm:mb-3">
               Yasiru<span className="text-emerald-400">CeylonTours</span>
             </h3>
-            <p className="text-xs sm:text-sm mb-3 sm:mb-4 text-gray-400">
-              Sri Lanka's most trusted cab and taxi service. Specializing in
-              reliable airport transfers, safe city tours, and seamless
-              island-wide travel.
+            <p className="text-xs sm:text-sm mb-2 sm:mb-3 text-gray-400 line-clamp-2 sm:line-clamp-none">
+              Sri Lanka's trusted cab service for airport transfers, tours &
+              travel.
             </p>
-            <div className="flex flex-col gap-2">
+            <div className="flex gap-3">
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBERS.kandy}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-400 hover:text-emerald-300 transition font-medium text-xs sm:text-sm"
+                className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition text-xs sm:text-sm"
               >
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5"
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -39,10 +39,10 @@ export default function Footer() {
                 href="https://www.facebook.com/share/1F2EZegsSS/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 sm:gap-2 text-blue-400 hover:text-blue-300 transition font-medium text-xs sm:text-sm"
+                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition text-xs sm:text-sm"
               >
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5"
+                  className="w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -55,16 +55,16 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+            <h4 className="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
               Quick Links
             </h4>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 sm:gap-y-2 text-xs sm:text-sm">
+            <ul className="grid grid-cols-1 gap-1 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/about"
                   className="hover:text-emerald-400 transition"
                 >
-                  About Us
+                  About
                 </Link>
               </li>
               <li>
@@ -80,7 +80,7 @@ export default function Footer() {
                   href="/fleet"
                   className="hover:text-emerald-400 transition"
                 >
-                  Our Fleet
+                  Fleet
                 </Link>
               </li>
               <li>
@@ -109,162 +109,74 @@ export default function Footer() {
 
           {/* Kandy Office */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Kandy Office</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span>{aboutContent.offices[0].address}</span>
+            <h4 className="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
+              Kandy Office
+            </h4>
+            <ul className="space-y-1 text-xs sm:text-sm">
+              <li className="text-gray-400">
+                {aboutContent.offices[0].address}
               </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <li>
+                <a
+                  href="tel:+94711372105"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <div className="flex flex-wrap gap-1">
-                  <a
-                    href="tel:+94711372105"
-                    className="hover:text-emerald-400 transition"
-                  >
-                    +94 71 137 2105
-                  </a>
-                  <span>/</span>
-                  <a
-                    href="tel:+94728242758"
-                    className="hover:text-emerald-400 transition"
-                  >
-                    +94 72 824 2758
-                  </a>
-                </div>
+                  +94 71 137 2105
+                </a>
               </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <li>
+                <a
+                  href="tel:+94728242758"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <span>{aboutContent.offices[0].hours}</span>
+                  +94 72 824 2758
+                </a>
+              </li>
+              <li className="text-emerald-400 text-xs">
+                {aboutContent.offices[0].hours}
               </li>
             </ul>
           </div>
 
           {/* Badulla Office */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Badulla Office</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span>{aboutContent.offices[1].address}</span>
+            <h4 className="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
+              Badulla Office
+            </h4>
+            <ul className="space-y-1 text-xs sm:text-sm">
+              <li className="text-gray-400">
+                {aboutContent.offices[1].address}
               </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <li>
+                <a
+                  href="tel:+94771183257"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <div className="flex flex-wrap gap-1">
-                  <a
-                    href="tel:+94771183257"
-                    className="hover:text-emerald-400 transition"
-                  >
-                    +94 77 118 3257
-                  </a>
-                  <span>/</span>
-                  <a
-                    href="tel:+94771183257"
-                    className="hover:text-emerald-400 transition"
-                  >
-                    +94 77 118 3257
-                  </a>
-                </div>
+                  +94 77 118 3257
+                </a>
               </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-5 h-5 mr-2 text-emerald-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <li>
+                <a
+                  href="tel:+94779835350"
+                  className="hover:text-emerald-400 transition"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <span>{aboutContent.offices[1].hours}</span>
+                  +94 77 983 5350
+                </a>
+              </li>
+              <li className="text-emerald-400 text-xs">
+                {aboutContent.offices[1].hours}
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+        <div className="border-t border-gray-700 mt-4 sm:mt-6 pt-4 text-xs sm:text-sm text-center">
           <p className="text-gray-400">
             &copy; {currentYear} YasiruCeylonTours. All rights reserved.
           </p>
-          <p className="mt-2 text-emerald-400 font-medium">
-            Your Trusted Cab & Tour Service in Sri Lanka - Available 24/7
+          <p className="mt-1 text-emerald-400 font-medium">
+            Available 24/7 Across Sri Lanka
           </p>
         </div>
       </div>

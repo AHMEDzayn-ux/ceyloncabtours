@@ -46,7 +46,7 @@ export default function FAQPage() {
   const categoryIcons = {
     booking: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6 sm:w-8 sm:h-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export default function FAQPage() {
     ),
     payment: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6 sm:w-8 sm:h-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ export default function FAQPage() {
     ),
     tours: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6 sm:w-8 sm:h-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ export default function FAQPage() {
     ),
     general: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6 sm:w-8 sm:h-8"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -131,28 +131,28 @@ export default function FAQPage() {
           },
         ]}
       >
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4 sm:mt-6">
           <Link
             href="#booking"
-            className="px-6 py-3 bg-white text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors shadow-lg"
+            className="px-3 py-2 sm:px-6 sm:py-3 bg-white text-emerald-600 rounded-lg font-semibold text-xs sm:text-base hover:bg-emerald-50 transition-colors shadow-lg"
           >
             Booking
           </Link>
           <Link
             href="#payment"
-            className="px-6 py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white/20"
+            className="px-3 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold text-xs sm:text-base hover:bg-white/20 transition-colors border border-white/20"
           >
             Payment
           </Link>
           <Link
             href="#tours"
-            className="px-6 py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white/20"
+            className="px-3 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold text-xs sm:text-base hover:bg-white/20 transition-colors border border-white/20"
           >
             Tours
           </Link>
           <Link
             href="#general"
-            className="px-6 py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white/20"
+            className="px-3 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur text-white rounded-lg font-semibold text-xs sm:text-base hover:bg-white/20 transition-colors border border-white/20"
           >
             General
           </Link>
@@ -160,22 +160,22 @@ export default function FAQPage() {
       </AnimatedHero>
 
       {/* FAQ Categories */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-8 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           {Object.entries(faqsByCategory).map(
             ([category, categoryFaqs], catIndex) => (
               <ScrollReveal key={category} delay={catIndex * 0.1}>
-                <div id={category} className="mb-16 scroll-mt-24">
+                <div id={category} className="mb-10 sm:mb-16 scroll-mt-24">
                   {/* Category Header */}
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-8">
+                    <div className="p-2 sm:p-3 bg-emerald-100 text-emerald-600 rounded-xl">
                       {categoryIcons[category as keyof typeof categoryIcons]}
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-gray-900">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                         {categories[category as keyof typeof categories]}
                       </h2>
-                      <p className="text-gray-600 mt-1">
+                      <p className="text-xs sm:text-sm text-gray-600 mt-0.5 sm:mt-1">
                         {
                           categoryDescriptions[
                             category as keyof typeof categoryDescriptions
@@ -186,16 +186,16 @@ export default function FAQPage() {
                   </div>
 
                   {/* FAQ Items */}
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {categoryFaqs.map((faq, index) => (
                       <details
                         key={index}
                         className="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
                       >
-                        <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-lg text-gray-900 list-none">
-                          <span className="flex items-start gap-3 flex-1">
+                        <summary className="flex items-center justify-between cursor-pointer p-3 sm:p-6 font-semibold text-sm sm:text-base md:text-lg text-gray-900 list-none">
+                          <span className="flex items-start gap-2 sm:gap-3 flex-1">
                             <svg
-                              className="w-6 h-6 text-emerald-500 mt-0.5 flex-shrink-0"
+                              className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500 mt-0.5 flex-shrink-0"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -223,8 +223,8 @@ export default function FAQPage() {
                             />
                           </svg>
                         </summary>
-                        <div className="px-6 pb-6">
-                          <div className="pl-9 text-gray-600 leading-relaxed">
+                        <div className="px-3 pb-3 sm:px-6 sm:pb-6">
+                          <div className="pl-7 sm:pl-9 text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                             {faq.answer}
                           </div>
                         </div>
@@ -239,20 +239,20 @@ export default function FAQPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-6">
+      <section className="py-10 sm:py-16 bg-gradient-to-br from-emerald-600 to-teal-600">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3 sm:mb-4">
               Still Have Questions?
             </h2>
-            <p className="text-xl text-emerald-50 mb-8">
+            <p className="text-sm sm:text-base md:text-xl text-emerald-50 mb-6 sm:mb-8">
               Our team is here to help you 24/7. Get in touch with us for
               personalized assistance.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-white text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 shadow-lg"
+                className="px-4 py-2.5 sm:px-8 sm:py-4 bg-white text-emerald-600 rounded-lg font-semibold text-sm sm:text-base hover:bg-emerald-50 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
                 <svg
                   className="w-5 h-5"
@@ -271,7 +271,7 @@ export default function FAQPage() {
               </Link>
               <Link
                 href="/"
-                className="px-8 py-4 bg-white/10 backdrop-blur text-white rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center gap-2 border border-white/20"
+                className="px-4 py-2.5 sm:px-8 sm:py-4 bg-white/10 backdrop-blur text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-white/20 transition-colors inline-flex items-center gap-2 border border-white/20"
               >
                 <svg
                   className="w-5 h-5"
