@@ -83,7 +83,7 @@ export interface BookingFormData {
   date: string;
   passengers: number;
   notes?: string;
-  office?: 'colombo' | 'badulla';
+  office?: 'kandy' | 'badulla';
 }
 
 export interface ReviewFormData {

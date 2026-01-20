@@ -13,7 +13,7 @@ export default function BookingForm() {
     date: "",
     passengers: 1,
     notes: "",
-    office: "colombo",
+    office: "kandy",
   });
 
   const handleSubmit = (e: FormEvent) => {

@@ -14,7 +14,7 @@ interface SEOConfig {
   type?: 'website' | 'article';
 }
 
-const SITE_NAME = 'CeylonCabTours';
+const SITE_NAME = 'YasiruCeylonTours';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ceyloncabs.lk';
 const DEFAULT_IMAGE = '/images/hero/hero-1.jpg';
 

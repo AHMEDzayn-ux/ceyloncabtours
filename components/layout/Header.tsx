@@ -29,7 +29,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2">
             <span className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:opacity-90 transition-opacity">
-              Ceylon<span className="text-emerald-500">CabTours</span>
+              Yasiru<span className="text-emerald-500">CeylonTours</span>
             </span>
           </Link>
 

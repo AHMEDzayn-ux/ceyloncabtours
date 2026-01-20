@@ -28,7 +28,7 @@ export const tours: Tour[] = [
     title: 'Ella & Nine Arch Bridge',
     shortDescription: 'Scenic hill country adventure featuring the famous Nine Arch Bridge, Little Adam\'s Peak, and stunning tea plantation vistas.',
     seoTitle: 'Ella Nine Arch Bridge Tour | Hill Country Adventure Sri Lanka',
-    seoDescription: 'Discover Ella\'s Nine Arch Bridge, hike Little Adam\'s Peak, and explore tea plantations. Customize your hill country adventure with CeylonCabTours.',
+    seoDescription: 'Discover Ella\'s Nine Arch Bridge, hike Little Adam\'s Peak, and explore tea plantations. Customize your hill country adventure with YasiruCeylonTours.',
     featured: true,
     heroImage: '/images/destinations/ella.jpg',
     category: 'nature'
@@ -46,7 +46,7 @@ export const tours: Tour[] = [
     title: 'Galle Fort & South Coast',
     shortDescription: 'Explore the historic Galle Fort, a UNESCO World Heritage site, and enjoy pristine southern beaches along Sri Lanka\'s stunning coastline.',
     seoTitle: 'Galle Fort & South Coast Tour | Colonial Heritage Sri Lanka',
-    seoDescription: 'Discover Galle Fort\'s colonial charm and pristine south coast beaches. Customized tours with professional drivers from CeylonCabTours.',
+    seoDescription: 'Discover Galle Fort\'s colonial charm and pristine south coast beaches. Customized tours with professional drivers from YasiruCeylonTours.',
     featured: true,
     heroImage: '/images/destinations/galle.jpg',
     category: 'cultural'
@@ -127,7 +127,7 @@ export const tours: Tour[] = [
     title: 'Bentota Beach & Water Sports',
     shortDescription: 'Enjoy golden beaches, thrilling water sports, and luxurious coastal resorts along Sri Lanka\'s pristine southwest coast.',
     seoTitle: 'Bentota Beach Tour | Water Sports & Resorts Sri Lanka',
-    seoDescription: 'Relax on Bentota\'s beautiful beaches with water sports, river cruises, and luxury resorts. Perfect beach getaway with CeylonCabTours.',
+    seoDescription: 'Relax on Bentota\'s beautiful beaches with water sports, river cruises, and luxury resorts. Perfect beach getaway with YasiruCeylonTours.',
     featured: false,
     heroImage: 'https://images.unsplash.com/photo-1706257023817-851555857321?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'adventure'

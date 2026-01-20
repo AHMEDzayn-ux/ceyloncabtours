@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   title: {
-    default: "CeylonCabTours | Premium Cab Service & Tours in Sri Lanka",
-    template: "%s | CeylonCabTours",
+    default: "YasiruCeylonTours | Premium Cab Service & Tours in Sri Lanka",
+    template: "%s | YasiruCeylonTours",
   },
   description:
     "Reliable cab service for airport transfers, city rides, and custom tours across Sri Lanka. Professional drivers, comfortable vehicles, and personalized service.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "airport transfer Sri Lanka",
     "Colombo taxi",
     "Sri Lanka tours",
-    "CeylonCabTours",
+    "YasiruCeylonTours",
     "Sri Lanka transportation",
     "Kandy taxi service",
     "Galle cab service",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "tour packages Sri Lanka",
     "airport pickup Colombo",
   ],
-  authors: [{ name: "CeylonCabTours" }],
-  creator: "CeylonCabTours",
-  publisher: "CeylonCabTours",
+  authors: [{ name: "YasiruCeylonTours" }],
+  creator: "YasiruCeylonTours",
+  publisher: "YasiruCeylonTours",
   formatDetection: {
     email: false,
     address: false,
@@ -49,22 +49,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_LK",
     url: process.env.NEXT_PUBLIC_SITE_URL,
-    siteName: "CeylonCabTours",
-    title: "CeylonCabTours | Premium Cab Service & Tours in Sri Lanka",
+    siteName: "YasiruCeylonTours",
+    title: "YasiruCeylonTours | Premium Cab Service & Tours in Sri Lanka",
     description:
-      "Explore Sri Lanka in comfort and style with CeylonCabTours. Professional transportation and custom tours.",
+      "Explore Sri Lanka in comfort and style with YasiruCeylonTours. Professional transportation and custom tours.",
     images: [
       {
         url: "/images/hero/hero-1.jpg",
         width: 1200,
         height: 630,
-        alt: "CeylonCabTours - Premium Transportation in Sri Lanka",
+        alt: "YasiruCeylonTours - Premium Transportation in Sri Lanka",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CeylonCabTours | Premium Cab Service Sri Lanka",
+    title: "YasiruCeylonTours | Premium Cab Service Sri Lanka",
     description: "Reliable transportation and custom tours across Sri Lanka",
     images: ["/images/hero/hero-1.jpg"],
   },
@@ -114,7 +114,7 @@ export default function RootLayout({
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="apple-mobile-web-app-title" content="CeylonCabTours" />
+        <meta name="apple-mobile-web-app-title" content="YasiruCeylonTours" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

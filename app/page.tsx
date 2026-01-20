@@ -6,6 +6,7 @@ import { Review } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import { generateBreadcrumbSchema } from "@/lib/schemas/structuredData";
+import { loadGalleryImages } from "@/lib/utils/galleryLoader";
 
 // Lazy load all client components for optimal code splitting
 const Hero = dynamic(() => import("@/components/home/Hero"), {
@@ -43,7 +44,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Book reliable cab services in Sri Lanka with CeylonCabTours. Airport transfers, city tours, and custom travel packages. Professional drivers, modern fleet, 24/7 service across Colombo, Kandy, Galle, and beyond.",
+    "Book reliable cab services in Sri Lanka with YasiruCeylonTours. Airport transfers, city tours, and custom travel packages. Professional drivers, modern fleet, 24/7 service across Colombo, Kandy, Galle, and beyond.",
   keywords: [
     "Sri Lanka cab booking",
     "airport transfer Colombo",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     "tour packages Sri Lanka",
   ],
   openGraph: {
-    title: "CeylonCabTours - Your Trusted Travel Partner in Sri Lanka",
+    title: "YasiruCeylonTours - Your Trusted Travel Partner in Sri Lanka",
     description:
       "Experience Sri Lanka with comfort and style. Professional cab services and custom tours across the island.",
     type: "website",
@@ -64,13 +65,13 @@ export const metadata: Metadata = {
         url: "/images/hero/hero-1.jpg",
         width: 1200,
         height: 630,
-        alt: "CeylonCabTours - Premium Transportation in Sri Lanka",
+        alt: "YasiruCeylonTours - Premium Transportation in Sri Lanka",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CeylonCabTours - Premium Cab Service Sri Lanka",
+    title: "YasiruCeylonTours - Premium Cab Service Sri Lanka",
     description:
       "Book reliable transportation across Sri Lanka. Airport transfers, tours, and more.",
     images: ["/images/hero/hero-1.jpg"],
@@ -99,6 +100,49 @@ export default async function HomePage() {
   } catch {
     console.log("Supabase not configured yet - reviews will be empty");
   }
+
+  // Load gallery images and select random 8 for preview
+  const allGalleryImages = loadGalleryImages();
+  const galleryPreview =
+    allGalleryImages.length > 0
+      ? allGalleryImages
+          .sort(() => Math.random() - 0.5) // Shuffle array
+          .slice(0, 8) // Take first 8
+      : [
+          // Fallback images if no gallery images exist
+          {
+            src: "https://images.unsplash.com/photo-1609681980718-340e7f4b11d7?q=80&w=840&auto=format&fit=crop",
+            alt: "Sigiriya Rock Fortress",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=800&q=80",
+            alt: "Temple of the Tooth",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=800&q=80",
+            alt: "Sri Lankan beaches",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1642095012245-bda8033e8ee3?w=800&q=80",
+            alt: "Nine Arches Bridge",
+          },
+          {
+            src: "https://images.pexels.com/photos/33983455/pexels-photo-33983455.jpeg?w=800&q=80",
+            alt: "Tea estates",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1608748010899-18f300247112?w=800&q=80",
+            alt: "Galle Fort",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?w=800&q=80",
+            alt: "Wildlife safari",
+          },
+          {
+            src: "https://images.pexels.com/photos/31154120/pexels-photo-31154120.jpeg?w=800&q=80",
+            alt: "Ancient temples",
+          },
+        ];
 
   // Generate structured data
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -138,7 +182,7 @@ export default async function HomePage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
             {[
               {
                 category: "Vans",
@@ -271,48 +315,7 @@ export default async function HomePage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto mb-10">
-            {[
-              {
-                src: "https://images.unsplash.com/photo-1609681980718-340e7f4b11d7?q=80&w=840&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                alt: "Sigiriya Rock Fortress",
-                title: "Sigiriya",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=800&q=80",
-                alt: "Temple of the Tooth",
-                title: "Kandy",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=800&q=80",
-                alt: "Sri Lankan beaches",
-                title: "Beaches",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1642095012245-bda8033e8ee3?w=800&q=80",
-                alt: "Nine Arches Bridge",
-                title: "Ella",
-              },
-              {
-                src: "https://images.pexels.com/photos/33983455/pexels-photo-33983455.jpeg?w=800&q=80",
-                alt: "Tea estates",
-                title: "Tea Country",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1608748010899-18f300247112?w=800&q=80",
-                alt: "Galle Fort",
-                title: "Galle Fort",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?w=800&q=80",
-                alt: "Wildlife safari",
-                title: "Wildlife",
-              },
-              {
-                src: "https://images.pexels.com/photos/31154120/pexels-photo-31154120.jpeg?w=800&q=80",
-                alt: "Ancient temples",
-                title: "Heritage",
-              },
-            ].map((photo, index) => (
+            {galleryPreview.map((photo, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <div className="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                   <Image
@@ -327,7 +330,7 @@ export default async function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <p className="text-white font-bold text-lg">
-                        {photo.title}
+                        {photo.alt}
                       </p>
                     </div>
                   </div>

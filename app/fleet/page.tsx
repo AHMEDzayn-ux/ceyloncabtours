@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Toyota KDH rental",
   ],
   openGraph: {
-    title: "Our Fleet | CeylonCabTours",
+    title: "Our Fleet | YasiruCeylonTours",
     description:
       "Premium vehicles for every journey. Sedans, SUVs, vans, and luxury cars available.",
     type: "website",

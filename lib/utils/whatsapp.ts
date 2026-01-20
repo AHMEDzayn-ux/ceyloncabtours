@@ -6,13 +6,13 @@ import { BookingFormData } from '@/types';
  */
 
 export const WHATSAPP_NUMBERS = {
-  colombo: '94771183257',
+  kandy: '94728242758',
   badulla: '94771183257',
 };
 
 export function generateWhatsAppURL(
   data: BookingFormData,
-  office: 'colombo' | 'badulla' = 'colombo'
+  office: 'kandy' | 'badulla' = 'kandy'
 ): string {
   const phoneNumber = WHATSAPP_NUMBERS[office];
 
@@ -45,7 +45,7 @@ export function generateWhatsAppURL(
 export function generateTourInquiryURL(
   tourTitle: string,
   userName?: string,
-  office: 'colombo' | 'badulla' = 'colombo'
+  office: 'kandy' | 'badulla' = 'kandy'
 ): string {
   const phoneNumber = WHATSAPP_NUMBERS[office];
 
@@ -63,7 +63,7 @@ export function generateTourInquiryURL(
 
 export function generateGeneralInquiryURL(
   message: string,
-  office: 'colombo' | 'badulla' = 'colombo'
+  office: 'kandy' | 'badulla' = 'kandy'
 ): string {
   const phoneNumber = WHATSAPP_NUMBERS[office];
   const encodedMessage = encodeURIComponent(message);

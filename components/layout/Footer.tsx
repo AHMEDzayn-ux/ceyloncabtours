@@ -12,16 +12,16 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
-              Ceylon<span className="text-emerald-400">CabTours</span>
+              Yasiru<span className="text-emerald-400">CeylonTours</span>
             </h3>
             <p className="text-xs sm:text-sm mb-3 sm:mb-4 text-gray-400">
               Sri Lanka's most trusted cab and taxi service. Specializing in
               reliable airport transfers, safe city tours, and seamless
               island-wide travel.
             </p>
-            <div className="flex space-x-3">
+            <div className="flex flex-col gap-2">
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBERS.colombo}`}
+                href={`https://wa.me/${WHATSAPP_NUMBERS.kandy}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 sm:gap-2 text-emerald-400 hover:text-emerald-300 transition font-medium text-xs sm:text-sm"
@@ -35,6 +35,21 @@ export default function Footer() {
                 </svg>
                 WhatsApp
               </a>
+              <a
+                href="https://www.facebook.com/share/1F2EZegsSS/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 sm:gap-2 text-blue-400 hover:text-blue-300 transition font-medium text-xs sm:text-sm"
+              >
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                Facebook
+              </a>
             </div>
           </div>
 
@@ -43,7 +58,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
               Quick Links
             </h4>
-            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 sm:gap-y-2 text-xs sm:text-sm">
               <li>
                 <Link
                   href="/about"
@@ -92,9 +107,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Colombo Office */}
+          {/* Kandy Office */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Colombo Office</h4>
+            <h4 className="text-white font-semibold mb-4">Kandy Office</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start">
                 <svg
@@ -132,12 +147,21 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <a
-                  href={`tel:+${WHATSAPP_NUMBERS.colombo}`}
-                  className="hover:text-emerald-400 transition"
-                >
-                  {aboutContent.offices[0].phone}
-                </a>
+                <div className="flex flex-wrap gap-1">
+                  <a
+                    href="tel:+94711372105"
+                    className="hover:text-emerald-400 transition"
+                  >
+                    +94 71 137 2105
+                  </a>
+                  <span>/</span>
+                  <a
+                    href="tel:+94728242758"
+                    className="hover:text-emerald-400 transition"
+                  >
+                    +94 72 824 2758
+                  </a>
+                </div>
               </li>
               <li className="flex items-start">
                 <svg
@@ -198,12 +222,21 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <a
-                  href={`tel:+${WHATSAPP_NUMBERS.badulla}`}
-                  className="hover:text-emerald-400 transition"
-                >
-                  {aboutContent.offices[1].phone}
-                </a>
+                <div className="flex flex-wrap gap-1">
+                  <a
+                    href="tel:+94771183257"
+                    className="hover:text-emerald-400 transition"
+                  >
+                    +94 77 118 3257
+                  </a>
+                  <span>/</span>
+                  <a
+                    href="tel:+94771183257"
+                    className="hover:text-emerald-400 transition"
+                  >
+                    +94 77 118 3257
+                  </a>
+                </div>
               </li>
               <li className="flex items-start">
                 <svg
@@ -228,7 +261,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} CeylonCabTours. All rights reserved.
+            &copy; {currentYear} YasiruCeylonTours. All rights reserved.
           </p>
           <p className="mt-2 text-emerald-400 font-medium">
             Your Trusted Cab & Tour Service in Sri Lanka - Available 24/7

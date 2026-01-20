@@ -1,20 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { WHATSAPP_NUMBERS } from "@/lib/utils/whatsapp";
 
 export default function FloatingWhatsApp() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleClick = () => {
     const message = "Hello! I'd like to inquire about your cab services.";
     const url = `https://wa.me/${
-      WHATSAPP_NUMBERS.colombo
+      WHATSAPP_NUMBERS.kandy
     }?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  return (
+  const button = (
     <button
       onClick={handleClick}
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 animate-beat group"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[99999] bg-green-500 hover:bg-green-600 text-white rounded-full p-3 sm:p-4 shadow-2xl transition-all duration-300 hover:scale-110 group"
       aria-label="Chat on WhatsApp"
     >
       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -26,4 +34,8 @@ export default function FloatingWhatsApp() {
       </span>
     </button>
   );
+
+  // Use portal to render directly to document.body, bypassing any parent stacking contexts
+  if (!mounted) return null;
+  return createPortal(button, document.body);
 }

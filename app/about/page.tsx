@@ -5,18 +5,18 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import { aboutContent } from "@/lib/data/about";
 
 export const metadata: Metadata = {
-  title: "About Us - CeylonCabTours | Trusted Sri Lanka Transportation",
+  title: "About Us - YasiruCeylonTours | Trusted Sri Lanka Transportation",
   description:
-    "Learn about CeylonCabTours - Sri Lanka's trusted cab service with over a decade of experience. Professional drivers, modern fleet, and 24/7 service.",
+    "Learn about YasiruCeylonTours - Sri Lanka's trusted cab service with over a decade of experience. Professional drivers, modern fleet, and 24/7 service.",
   keywords: [
-    "about CeylonCabTours",
+    "about YasiruCeylonTours",
     "Sri Lanka taxi service",
     "professional drivers Sri Lanka",
     "cab service history",
     "transportation company Sri Lanka",
   ],
   openGraph: {
-    title: "About CeylonCabTours | Your Trusted Travel Partner",
+    title: "About YasiruCeylonTours | Your Trusted Travel Partner",
     description:
       "Professional cab and tour services across Sri Lanka with experienced drivers and modern vehicles.",
     type: "website",
@@ -31,7 +31,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <AnimatedHero
-        title="About CeylonCabTours"
+        title="About YasiruCeylonTours"
         subtitle="Your Trusted Travel Partner"
         description="Professional cab and tour services across Sri Lanka with customer satisfaction at our core"
         images={[
@@ -96,7 +96,7 @@ export default function AboutPage() {
           <ScrollReveal delay={0.1}>
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
               <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                At CeylonCabTours, customer satisfaction is at the heart of
+                At YasiruCeylonTours, customer satisfaction is at the heart of
                 everything we do. We take pride in delivering exceptional
                 transportation experiences that exceed expectations. Our journey
                 has been shaped by countless positive feedback from travelers
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose CeylonCabTours
+                Why Choose YasiruCeylonTours
               </h2>
               <div className="w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
             </div>
@@ -300,7 +300,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-emerald-50/90 mb-8">
               Book your ride today and discover why thousands of travelers trust
-              CeylonCabTours for their journeys.
+              YasiruCeylonTours for their journeys.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

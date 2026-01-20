@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Find answers to common questions about our cab services, bookings, tours, and more. Learn about our transparent pricing, professional drivers, and 24/7 availability.",
   keywords: [
     "Sri Lanka cab FAQ",
-    "CeylonCabTours questions",
+    "YasiruCeylonTours questions",
     "booking information",
     "pricing questions",
     "travel FAQ Sri Lanka",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "taxi booking help",
   ],
   openGraph: {
-    title: "FAQ | CeylonCabTours",
+    title: "FAQ | YasiruCeylonTours",
     description:
       "Common questions about our services, pricing, and booking process.",
     type: "website",
