@@ -10,21 +10,25 @@ export default function Icon() {
   return new ImageResponse(
     <div
       style={{
-        background: "white",
+        background: "linear-gradient(135deg, #2563eb 0%, #1e40af 100%)",
         width: "100%",
         height: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "4px",
+        borderRadius: "6px",
       }}
     >
-      <img
-        src="/images/logo.svg"
-        width="100%"
-        height="100%"
-        style={{ objectFit: "contain" }}
-      />
+      <div
+        style={{
+          fontSize: "20px",
+          fontWeight: "bold",
+          color: "white",
+          display: "flex",
+        }}
+      >
+        🚖
+      </div>
     </div>,
     {
       ...size,
