@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -28,6 +29,15 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0 bg-white rounded-lg p-1.5">
+              <Image
+                src="/images/logo.svg"
+                alt="YasiruCeylonTours Logo"
+                fill
+                className="object-contain group-hover:opacity-90 transition-opacity p-0.5"
+                priority
+              />
+            </div>
             <span className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:opacity-90 transition-opacity">
               Yasiru<span className="text-emerald-500">CeylonTours</span>
             </span>

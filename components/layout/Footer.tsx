@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { aboutContent } from "@/lib/data/about";
 import { WHATSAPP_NUMBERS } from "@/lib/utils/whatsapp";
 
@@ -12,9 +13,19 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Company Info - Full width on mobile */}
           <div className="col-span-2 lg:col-span-1 mb-2 sm:mb-0">
-            <h3 className="text-white text-lg sm:text-xl font-bold mb-2 sm:mb-3">
-              Yasiru<span className="text-emerald-400">CeylonTours</span>
-            </h3>
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 bg-white rounded-lg p-1.5">
+                <Image
+                  src="/images/logo.svg"
+                  alt="YasiruCeylonTours Logo"
+                  fill
+                  className="object-contain p-0.5"
+                />
+              </div>
+              <h3 className="text-white text-lg sm:text-xl font-bold">
+                Yasiru<span className="text-emerald-400">CeylonTours</span>
+              </h3>
+            </div>
             <p className="text-xs sm:text-sm mb-2 sm:mb-3 text-gray-400 line-clamp-2 sm:line-clamp-none">
               Sri Lanka's trusted cab service for airport transfers, tours &
               travel.
@@ -126,10 +137,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+94728242758"
+                  href="tel:+94719383193"
                   className="hover:text-emerald-400 transition"
                 >
-                  +94 72 824 2758
+                  +94 71 938 3193
                 </a>
               </li>
               <li className="text-emerald-400 text-xs">
@@ -157,10 +168,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+94779835350"
+                  href="tel:+94728242758"
                   className="hover:text-emerald-400 transition"
                 >
-                  +94 77 983 5350
+                  +94 72 824 2758
                 </a>
               </li>
               <li className="text-emerald-400 text-xs">

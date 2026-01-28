@@ -124,10 +124,10 @@ export default function ContactPage() {
                           /
                         </span>
                         <a
-                          href="tel:+94728242758"
+                          href="tel:+94719383193"
                           className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
-                          +94 72 824 2758
+                          +94 71 938 3193
                         </a>
                       </div>
                     </div>
@@ -202,10 +202,10 @@ export default function ContactPage() {
                           /
                         </span>
                         <a
-                          href="tel:+94771183257"
+                          href="tel:+94728242758"
                           className="text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
-                          +94 77 118 3257
+                          +94 72 824 2758
                         </a>
                       </div>
                     </div>

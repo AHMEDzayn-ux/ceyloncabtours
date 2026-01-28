@@ -20,9 +20,9 @@ export default function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    once: false,
-    margin: "-80px",
-    amount: 0.2,
+    once: true,
+    margin: "-50px",
+    amount: 0.15,
   });
 
   const directions = {
