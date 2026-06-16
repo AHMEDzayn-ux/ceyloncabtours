@@ -29,7 +29,7 @@ export default function ServicesOverview() {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "-50px" }
+      { threshold: 0.15, rootMargin: "-50px" },
     );
 
     if (sectionRef.current) {
@@ -41,7 +41,10 @@ export default function ServicesOverview() {
 
   return (
     // Reduced vertical padding from py-24 to py-12
-    <section ref={sectionRef} className="py-8 sm:py-12 bg-white">
+    <section
+      ref={sectionRef}
+      className="py-8 sm:py-12 bg-gradient-to-b from-emerald-50/80 via-white to-slate-50"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         {/* Reduced bottom margin from mb-20 to mb-10 */}
         <div className="text-center mb-8 sm:mb-10">

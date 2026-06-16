@@ -26,7 +26,7 @@ export default function BookingForm() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -35,7 +35,10 @@ export default function BookingForm() {
   };
 
   return (
-    <section id="booking" className="py-8 sm:py-12 bg-gray-50">
+    <section
+      id="booking"
+      className="py-8 sm:py-12 bg-gradient-to-b from-emerald-50/80 via-white to-slate-50"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -171,7 +174,7 @@ export default function BookingForm() {
                       <option key={num} value={num}>
                         {num} {num === 1 ? "Person" : "People"}
                       </option>
-                    )
+                    ),
                   )}
                 </select>
               </div>

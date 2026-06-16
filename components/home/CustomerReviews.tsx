@@ -1,4 +1,4 @@
-import { Review } from '@/types';
+import { Review } from "@/types";
 
 interface CustomerReviewsProps {
   reviews: Review[];
@@ -10,7 +10,7 @@ export default function CustomerReviews({ reviews }: CustomerReviewsProps) {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-white via-emerald-50/50 to-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -33,18 +33,18 @@ export default function CustomerReviews({ reviews }: CustomerReviewsProps) {
                   <span
                     key={i}
                     className={`text-2xl ${
-                      i < review.rating ? 'text-yellow-400' : 'text-gray-300'
+                      i < review.rating ? "text-yellow-400" : "text-gray-300"
                     }`}
                   >
                     ★
                   </span>
                 ))}
               </div>
-              
+
               <p className="text-gray-700 mb-4 italic">
                 &ldquo;{review.content}&rdquo;
               </p>
-              
+
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-bold text-gray-900">{review.name}</p>
                 {review.location && (

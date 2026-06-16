@@ -34,7 +34,7 @@ export default function PopularDestinations() {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "-50px" }
+      { threshold: 0.15, rootMargin: "-50px" },
     );
 
     if (sectionRef.current) {
@@ -46,7 +46,10 @@ export default function PopularDestinations() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-8 sm:py-12 bg-gray-50">
+    <section
+      ref={sectionRef}
+      className="py-8 sm:py-12 bg-gradient-to-b from-slate-50 via-emerald-50/60 to-white"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">

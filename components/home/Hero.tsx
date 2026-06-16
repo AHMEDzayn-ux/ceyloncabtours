@@ -159,7 +159,7 @@ export default function Hero() {
 
               {/* Secondary Action */}
               <Link
-                href="/tours"
+                href="/destinations"
                 className="flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-emerald-400/50 text-white hover:text-emerald-300 rounded-full font-semibold text-sm sm:text-base md:text-lg transition-all duration-300"
               >
                 Explore Tours

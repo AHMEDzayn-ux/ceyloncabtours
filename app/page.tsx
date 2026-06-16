@@ -162,7 +162,7 @@ export default async function HomePage() {
       {/* Fleet Preview Section */}
       <section
         aria-labelledby="fleet-heading"
-        className="py-8 sm:py-12 bg-white"
+        className="py-8 sm:py-12 bg-gradient-to-b from-slate-50 via-emerald-50/60 to-white"
       >
         <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
@@ -295,7 +295,7 @@ export default async function HomePage() {
       {/* Gallery Preview - Moments from Our Tours */}
       <section
         aria-labelledby="gallery-heading"
-        className="py-8 sm:py-12 bg-white"
+        className="py-8 sm:py-12 bg-gradient-to-b from-emerald-50/80 via-white to-slate-50"
       >
         <div className="container mx-auto px-6">
           <ScrollReveal>
