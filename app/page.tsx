@@ -19,13 +19,13 @@ const ServicesOverview = dynamic(
   () => import("@/components/home/ServicesOverview"),
   {
     loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
-  }
+  },
 );
 const PopularDestinations = dynamic(
   () => import("@/components/home/PopularDestinations"),
   {
     loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
-  }
+  },
 );
 const BookingForm = dynamic(() => import("@/components/home/BookingForm"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
@@ -34,7 +34,7 @@ const CustomerReviews = dynamic(
   () => import("@/components/home/CustomerReviews"),
   {
     loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
-  }
+  },
 );
 
 // ISR - Revalidate every 30 minutes
@@ -325,13 +325,7 @@ export default async function HomePage() {
                     loading="lazy"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white font-bold text-lg">
-                        {photo.alt}
-                      </p>
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </ScrollReveal>
             ))}
